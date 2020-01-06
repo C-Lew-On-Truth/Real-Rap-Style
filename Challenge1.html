@@ -1,0 +1,84 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="Rap-Style.css">
+</head>
+<title>
+    Are You a Real Rap Fan?
+</title>
+
+<header>Challenge 1</header>
+
+
+<audio id="tupac-audio">
+    <source src="Wrong-Answer-Sound/Your-a-Buster.m4a" type="audio/mpeg">
+</audio>
+
+<audio id="e-40-audio">
+    <source src="Music/E-40_Catch-A-Fade.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="kurupt-audio">
+    <source src="Wrong-Answer-Sound/Do-you-even-listen-to-Rap-Music.m4a" type="audio/mpeg">
+</audio>
+
+<audio id="outkast-audio">
+    <source src="Wrong-Answer-Sound/You-like-country-huh.m4a" type="audio/mpeg">
+</audio>
+
+<audio id="jayz-audio">
+    <source src="Wrong-Answer-Sound/Maybe-you-should-just-quit-buddy.m4a" type="audio/mpeg">
+</audio>
+
+<body>
+
+<h1 id="noMoreQuestions">Click the picture of the rapper who said these lyrics below!</h1>
+<h1 id="rightAns1">Nice Pick! E-40 said those lyrics!</h1>
+
+<p class="rap-bars">
+    Trapper factor macker having money like a rapper<br>
+    Bumping local talent pulling up with the blabber<br>
+    Patna wanna challenge 'cause my pockets hella fatter<br>
+    But he gone be unlucky like walking under a ladder<br>
+    Put hands on a man, fuck unity<br>
+    Ain't nothing between us, but space and opportunity
+</p>
+
+<button id="restart">Restart</button>
+
+<div class="grid-container">
+
+    <div class="container-items" id="imageSwitch1">
+        <img id="tupac-plays" src="PICTURES/Tupac.jpg"/>
+    </div>
+
+    <div class="container-items" id="imageRight">
+        <img id="e-40-plays" src="PICTURES/E-40.jpg">
+    </div>
+
+    <div class="container-items" id="imageSwitch2">
+        <img id="kurupt-plays" src="PICTURES/Kurupt.jpg">
+    </div>
+
+    <div class="container-items" id="imageSwitch3">
+        <img id="outkast-plays" src="PICTURES/Outkast.jpg">
+    </div>
+
+    <div class="container-items" id="imageSwitch4">
+        <img id="jayz-plays" src="PICTURES/JayZ.jpg">
+    </div>
+
+</div>
+
+<button id="stop" class="stop-music">Stop Music</button>
+<button id="next-challenge">Next Challenge</button>
+
+
+
+
+
+<script type="module" src="music-with-game.js"></script>
+<script type="module" src="game-functions.js"></script>
+</body>
+
+
+</html>
