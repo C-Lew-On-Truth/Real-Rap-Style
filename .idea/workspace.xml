@@ -16,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Challenge1.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="42" column="55" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="55" />
+            <state relative-caret-position="376">
+              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
             </state>
           </provider>
         </entry>
@@ -60,6 +60,9 @@
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -68,10 +71,10 @@
         <option value="$PROJECT_DIR$/../../Training/Test.html" />
         <option value="$PROJECT_DIR$/../../Training/ElementChange.html" />
         <option value="$PROJECT_DIR$/music-with-game.js" />
-        <option value="$PROJECT_DIR$/Challenge1.html" />
         <option value="$PROJECT_DIR$/Rap-Style.css" />
         <option value="$PROJECT_DIR$/game-functions.js" />
         <option value="$PROJECT_DIR$/Challenge2.html" />
+        <option value="$PROJECT_DIR$/Challenge1.html" />
       </list>
     </option>
   </component>
@@ -80,6 +83,7 @@
     <option name="width" value="1440" />
     <option name="height" value="877" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -110,6 +114,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -162,12 +167,12 @@
       <workItem from="1577410439576" duration="8017000" />
       <workItem from="1577494553252" duration="348000" />
       <workItem from="1577568975090" duration="4787000" />
-      <workItem from="1578277564775" duration="470000" />
+      <workItem from="1578277564775" duration="993000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69738000" />
+    <option name="totallyTimeSpent" value="70261000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -288,8 +293,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Challenge1.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="42" column="55" selection-start-line="42" selection-start-column="55" selection-end-line="42" selection-end-column="55" />
+        <state relative-caret-position="376">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
         </state>
       </provider>
     </entry>
