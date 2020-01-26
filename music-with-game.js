@@ -61,7 +61,7 @@
     stopMusic.addEventListener('click', musicStop);
 
 
-export { pacMusic, pacBeats, pacBegins};
+export { pacMusic, pacBeats, pacBegins };
 export { fortyMusic, fortyBeats, playForty };
 export { kuruptMusic, kuruptBeats, playKurupt };
 export { outkastMusic, outkastBeats, playOutkast };

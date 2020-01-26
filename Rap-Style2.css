@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    justify-items: center;
+    background-color: black;
+    color: white;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 10px;
+    border: white dashed 5px;
+    width: 60%;
+    height: 700px;
+    position: absolute;
+    right: 5%;
+    padding: 10px;
+    justify-items: center;
+    margin: 20px;
+}
+
+.grid-items {
+    border: green 2px solid;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    margin: auto;
+}
+
+/* test */
+.grid-items2 {
+    border: white 2px solid;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+    margin: auto;
+}
+
+
+
+#message {
+    position: absolute;
+    float: left;
+    width: 30%;
+    height: 350px;
+    border: red 2px dashed;
+    text-align: center;
+    margin:20px;
+}
+
+#yellowDrop, #redDrop, #blueDrop, #greenDrop, #jRock-plays {
+    border: white 2px solid;
+    color: white;
+}
+

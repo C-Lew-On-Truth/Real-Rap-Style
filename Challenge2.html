@@ -1,6 +1,87 @@
 <html>
-<title>Are you a real Rap Fan?</title>
-<div>
-    You made it!
+<title>Rap Challenge 2</title>
+<link rel="stylesheet" type="text/css" href="Rap-Style2.css">
+
+<audio id="jRock-audio">
+    <source src="Music/Jay Rock - ES Tales (Redemption).mp3" type="audio/mpeg">
+</audio>
+<audio id="drake-audio">
+    <source src="Music/Drake-Know_Yourself.mp3" type="audio/mpeg">
+</audio>
+<audio id="yGotti-audio">
+    <source src="Music/Kurupt-Game.mp3" type="audio/mpeg">
+</audio>
+<audio id="pusha-audio">
+    <source src="Music/Pusha-T--Alone_In_Vegas.mp3" type="audio/mpeg">
+</audio>
+<audio id="quik-audio">
+    <source src="Music/DJ_Quik-Tonite.mp3" type="audio/mpeg">
+</audio>
+
+<body>
+
+<div class="game-container"></div>
+
+<div class="grid-container">
+
+    <div class="grid-items" id="">
+        <p draggable="true" id="gottiDrag">
+            Kurupt
+        </p>
+    </div>
+    <div class="grid-items2" id="drake-plays">
+    </div>
+
+    <div class="grid-items">
+        <p draggable="true" id="pushaTDrag">
+           Pusha T 
+        </p>
+    </div>
+
+    <div class="grid-items2" id="yGotti-plays">
+    </div>
+    <div class="grid-items">
+        <p draggable="true" id="drakeDrag">
+            Drake
+        </p>
+    </div>
+
+    <div class="grid-items2" id="quik-plays">
+    </div>
+
+    <div class="grid-items">
+        <p draggable="true" id="jRockDrag">
+            Jay Rock
+        </p>
+    </div>
+    <div class="grid-items2" id="pusha-plays">
+        
+    </div>
+
+    <div class="grid-items">
+        <p draggable="true" id="quikDrag">
+            Dj Quik
+        </p>
+    </div>
+
+    <div class="grid-items2" id="jRock-plays">
+      
+    </div>
 </div>
+
+<div id="message">
+    <h1>Drag and Drop</h1>
+    <p>Drag an element and see if it sticks!</p>
+    <button id="stop-music2">STOP Music</button>
+    <button id="nextPage">Next Challenge</button>
+
+</div>
+
+</div>
+
+
+<script type="module" src="music-with-game2.js"></script>
+<script type="module" src="game-functions2.js"></script>
+</body>
+
 </html>

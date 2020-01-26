@@ -14,7 +14,7 @@ let jayWrong = document.getElementById('imageSwitch4');
 let fortyRight = document.getElementById('imageRight');
 let reStartBtn = document.getElementById('restart');
 let nextLevel = document.getElementById('next-challenge');
-let questionsGos = document.getElementById('noMoreQuestions')
+let questionsGos = document.getElementById('noMoreQuestions');
 let rightAnsMessage = document.getElementById('rightAns1');
 
 let wrongPac = document.createElement('div');
