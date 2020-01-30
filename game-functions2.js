@@ -1,3 +1,4 @@
+//Imported Variables and functions
 import { jRock, jRockBeats, playJayRock } from './music-with-game2.js';
 import { drake, drakeBeats, playDrake } from './music-with-game2.js';
 import { youngGotti, yGottiBeats, playKurupt } from './music-with-game2.js';
@@ -9,17 +10,95 @@ const jRockContainer = document.getElementById('jRockStartBox');
 const drakeContainer = document.getElementById('drakeStartBox');
 const kuruptContainer = document.getElementById('kuruptStartBox');
 const pushaContainer = document.getElementById('pushaStartBox');
-const quikConatiner = document.getElementById('quikStartBox');
+const quikContainer = document.getElementById('quikStartBox');
+
 
 //Drag Rapper Ids
 let drakeAns = document.getElementById('drakeDrag');
-let pushaAns = document.getElementById('pushaTDrag');
+let pushaAns = document.getElementById('pushaDrag');
 let kuruptAns = document.getElementById('gottiDrag');
 let quikAns = document.getElementById('quikDrag');
 let jRockAns = document.getElementById('jRockDrag');
 
+
+//Declartion for next challenge button
 let nextPage = document.getElementById('nextPage');
 nextPage.hidden = true;
+nextPage.onclick = function() {
+    alert(rightRapTracker)
+}
+
+const wrongRapDrag = [
+    '<br><br>NO NO NO!', 
+    '<br><br>Seriously Bro...?', 
+    '<br><br>WTF are you smoking!?', 
+    '<br><br>Fake ass Rap Fan', 
+    '<br>You call <br>yourself a <br>contender?'
+];
+
+/*
+const rightRapDrag = [
+    '<br><br>Yuuup Thats Drizzy!',
+    'Kurupt Young Gotti!',
+    'DJ Quik! Thats Old Skool!',
+    '<br>Yuuup!<br>Thats Jay Rock<br>Straight Thugged Out!',
+    'Pusha Push!'
+];
+*/
+
+
+let rightRapAns = {
+    drakeRight: function() {
+        drakeBeats.innerHTML = "<br>Yuuup Thats Drizzy!";
+        
+    },
+    jRockRight: function() {
+        jRockBeats.innerHTML = "<br>Yuuup!<br>Thats Jay Rock<br>Straight Thugged Out!";
+        
+    },
+
+    quikRight: function() {
+        quikBeats.innerHTML = "<br>DJ Quik! <br><br>Thats Old Skool!"
+    },
+
+    pushaRight: function() {
+        pushaBeats.innerHTML = "<br><br>Pusha Push!";
+    },
+
+    kuruptRight: function() {
+        yGottiBeats.innerHTML = "<br><br>Kurupt Young Gotti!";
+        yGottiBeats.style.backgroundColor = "white";
+        yGottiBeats.style.color = "black";
+    }
+
+
+};
+
+
+const returnRapDrags = {
+    returnJrock: function() {
+        jRockContainer.innerHTML = "<p draggable='true' id='jRockDrag'>Jay Rock</p>";
+    },
+
+    returnDrake: function() {
+        drakeContainer.innerHTML = "<p draggable='true' id='drakeDrag'> Drake </p>";
+    },
+
+    returnPusha: function() {
+        pushaContainer.innerHTML = "<p draggable='true' id='pushaDrag'> Pusha T </p>";
+    },
+
+    returnQuik: function() {
+        quikContainer.innerHTML = "<p draggable='true' id='quikDrag'> Dj Quik </p>";
+    },
+
+    returnKurupt: function() {
+        kuruptContainer.innerHTML = "<p draggable='true' id='gottiDrag'> Kurupt </p>";
+    }
+
+};
+
+
 
 
 document.ondragstart = function (event) {
@@ -32,76 +111,175 @@ document.ondragover = function (event) {
     console.log('dragover');
 };
 
-function jRockDrop(event) {
-    event.preventDefault();
-    let jdata = event.dataTransfer.getData('text');
-    event.target.appendChild(document.getElementById(jdata));
-   console.log('Jay Rock does not play');
-   //jRockBeats.removeEventListener('click',playJayRock );
-   jRock.pause();
+
+const rapperDrop = {
+
+    jRockDrop: function(event) {
+        event.preventDefault();
+        let jdata = event.dataTransfer.getData('text');
+        event.target.appendChild(document.getElementById(jdata));
+       console.log('Jay Rock does not play');
+        jRock.pause();
+
+       if(event.target.querySelector('#jRockDrag')) {
+       //jRockBeats.innerHTML = rightRapDrag[3];
+       rightRapAns.jRockRight()
+       rightRapTracker.push('Jay Rock!')
+        } else if (event.target.querySelector('#drakeDrag')) {
+            jRockBeats.innerHTML = wrongRapDrag[2];
+            returnRapDrags.returnJrock();
+            returnRapDrags.returnDrake();
+        } else if (event.target.querySelector('#pushaDrag')) {
+            jRockBeats.innerHTML = wrongRapDrag[2]   
+            returnRapDrags.returnJrock();
+            returnRapDrags.returnPusha();
+        } else if (event.target.querySelector('#quikDrag')) {
+            jRockBeats.innerHTML = wrongRapDrag[2]
+            returnRapDrags.returnJrock();
+            returnRapDrags.returnQuik();
+        } else if (event.target.querySelector('#gottiDrag')) {
+            jRockBeats.innerHTML = wrongRapDrag[2]
+            returnRapDrags.returnJrock();
+            returnRapDrags.returnKurupt();
+        }
+       },
+
+    drakeDrop: function(event) {
+        event.preventDefault();
+        let drakeData = event.dataTransfer.getData('text');
+        event.target.appendChild(document.getElementById(drakeData));
+        console.log('Drake does not playing');
+        drake.pause();
+
+        if(event.target.querySelector('#drakeDrag')) {
+            //drakeBeats.innerHTML = rightRapDrag[0];
+            rightRapAns.drakeRight();
+            rightRapTracker.push('Drake!')
+        } else if (event.target.querySelector('#jRockDrag')) {
+            drakeBeats.innerHTML = wrongRapDrag[3]
+            returnRapDrags.returnDrake();
+            returnRapDrags.returnJrock();
+        } else if (event.target.querySelector('#pushaDrag')) {
+            drakeBeats.innerHTML = wrongRapDrag[3]
+            returnRapDrags.returnDrake();
+            returnRapDrags.returnPusha();
+        } else if (event.target.querySelector('#quikDrag')) {
+            drakeBeats.innerHTML = wrongRapDrag[3]
+            returnRapDrags.returnDrake();
+            returnRapDrags.returnQuik();
+        } else if (event.target.querySelector('#gottiDrag')) {
+            drakeBeats.innerHTML = wrongRapDrag[3]
+            returnRapDrags.returnDrake();
+            returnRapDrags.returnKurupt();
+        }
+       },
+
+
+       pushaDrop: function(event) {
+        event.preventDefault() 
+         let pushaTData = event.dataTransfer.getData('text');  
+         event.target.appendChild(document.getElementById(pushaTData)); 
+         console.log('pusha T stops playing')
+         pushaT.pause()
+
+         if(event.target.querySelector('#pushaDrag')) {
+             rightRapAns.pushaRight();
+             rightRapTracker.push('Pusha Push!');
+         } else if (event.target.querySelector('#drakeDrag')) {
+             pushaBeats.innerHTML = wrongRapDrag[0];
+             returnRapDrags.returnPusha();
+             returnRapDrags.returnDrake();
+         } else if (event.target.querySelector('#jRockDrag')) {
+            pushaBeats.innerHTML = wrongRapDrag[0];
+            returnRapDrags.returnPusha();
+            returnRapDrags.returnJrock();
+         } else if (event.target.querySelector('#quikDrag')) {
+            pushaBeats.innerHTML = wrongRapDrag[0];
+            returnRapDrags.returnPusha();
+            returnRapDrags.returnQuik();
+         } else if (event.target.querySelector('#gottiDrag')) {
+            pushaBeats.innerHTML = wrongRapDrag[0];
+            returnRapDrags.returnPusha();
+            returnRapDrags.returnKurupt();
+         }
+    },
+
+    quikDrop: function(event) {
+        event.preventDefault() 
+         let pushaTData = event.dataTransfer.getData('text');  
+         event.target.appendChild(document.getElementById(pushaTData)); 
+         console.log('pusha T stops playing');
+         quik.pause();
+
+         if(event.target.querySelector('#quikDrag')) {
+            rightRapAns.quikRight();
+            rightRapTracker.push('DJ Quik!');
+         } else if (event.target.querySelector('#jRockDrag')) {
+            quikBeats.innerHTML =  wrongRapDrag[1];
+            returnRapDrags.returnQuik();
+            returnRapDrags.returnJrock()
+         } else if (event.target.querySelector('#drakeDrag')) {
+            quikBeats.innerHTML =  wrongRapDrag[1];
+            returnRapDrags.returnQuik();
+            returnRapDrags.returnDrake() 
+         } else if(event.target.querySelector('#pushaDrag')) {
+            quikBeats.innerHTML =  wrongRapDrag[1];
+            returnRapDrags.returnQuik();
+            returnRapDrags.returnPusha();
+         } else if(event.target.querySelector('#gottiDrag')) {
+            quikBeats.innerHTML =  wrongRapDrag[1];
+            returnRapDrags.returnQuik();
+            returnRapDrags.returnKurupt();
+         }
+    },
+
+     kuruptDrop: function(event) {
+        event.preventDefault(); 
+         let pushaTData = event.dataTransfer.getData('text');  
+         event.target.appendChild(document.getElementById(pushaTData)); 
+         console.log('pusha T stops playing');
+         youngGotti.pause();
+
+         if(event.target.querySelector('#gottiDrag')) {
+            rightRapAns.kuruptRight();
+            rightRapTracker.push('Kurupt Young Gotti!');
+         } else if (event.target.querySelector('#jRockDrag')) {
+             yGottiBeats.innerHTML = wrongRapDrag[4];
+             returnRapDrags.returnKurupt();
+             returnRapDrags.returnJrock();
+         } else if (event.target.querySelector('#drakeDrag')) {
+             yGottiBeats.innerHTML = wrongRapDrag[4];
+             returnRapDrags.returnKurupt();
+             returnRapDrags.returnDrake();
+         } else if (event.target.querySelector('#pushaDrag')) {
+            yGottiBeats.innerHTML = wrongRapDrag[4];
+            returnRapDrags.returnKurupt();
+            returnRapDrags.returnPusha();
+         } else if (event.target.querySelector('#quikDrag')) {
+             yGottiBeats.innerHTML = wrongRapDrag[4];
+             returnRapDrags.returnKurupt();
+             returnRapDrags.returnQuik();
+         }
+    }
 };
 
 
-function drakeDrop(event) {
-    event.preventDefault();
-    let drakeData = event.dataTransfer.getData('text');
-    event.target.appendChild(document.getElementById(drakeData));
-    console.log('Drake does not playing');
-    drake.pause();
-}
+jRockBeats.addEventListener('drop', rapperDrop.jRockDrop);
+drakeBeats.addEventListener('drop', rapperDrop.drakeDrop);
+pushaBeats.addEventListener('drop', rapperDrop.pushaDrop);
+quikBeats.addEventListener('drop', rapperDrop.quikDrop);
+yGottiBeats.addEventListener('drop', rapperDrop.kuruptDrop);
 
-function pushaDrop(event) {
-    event.preventDefault() 
-     let pushaTData = event.dataTransfer.getData('text');  
-     event.target.appendChild(document.getElementById(pushaTData)); 
-     console.log('pusha T stops playing')
-     pushaT.pause()
-}
+//Holder for when user drops all right answers
+const rightRapTracker = [];
 
-function quikDrop(event) {
-    event.preventDefault() 
-     let pushaTData = event.dataTransfer.getData('text');  
-     event.target.appendChild(document.getElementById(pushaTData)); 
-     console.log('pusha T stops playing')
-     quik.pause()
-}
-
-function kuruptDrop(event) {
-    event.preventDefault() 
-     let pushaTData = event.dataTransfer.getData('text');  
-     event.target.appendChild(document.getElementById(pushaTData)); 
-     console.log('pusha T stops playing')
-     youngGotti.pause()
-}
-
-
-let allRappersDropped = document.ondrop = function(event) {
-    event.preventDefault() 
-    let allData = event.dataTransfer.getData('text');
-    event.target.appendChild(document.getElementById(allData))
-} 
-
-function testAllDrop(event) {
-        event.target.jRockBeats.querySelector('jRockDrag'); 
-        console.log('function worked')
-}
-
-function test() {
-    
-    if(allRappersDropped) {
+window.addEventListener('drop', function() {
+    if (rightRapTracker.length === 5) {
         nextPage.hidden = false;
-    } else {
-        nextPage.hidden = true;
     }
-    console.log('right rapper')
-}
+
+})
 
 
-jRockBeats.addEventListener('drop', jRockDrop);
-drakeBeats.addEventListener('drop', drakeDrop);
-pushaBeats.addEventListener('drop', pushaDrop);
-quikBeats.addEventListener('drop', quikDrop);
-yGottiBeats.addEventListener('drop', kuruptDrop);
-//nextPage.addEventListener('drop', test);
-
+        
 
