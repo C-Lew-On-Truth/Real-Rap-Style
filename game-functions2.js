@@ -124,23 +124,27 @@ const rapperDrop = {
        if(event.target.querySelector('#jRockDrag')) {
        //jRockBeats.innerHTML = rightRapDrag[3];
        rightRapAns.jRockRight()
-       rightRapTracker.push('Jay Rock!')
+       rightRapTracker.push('point')
         } else if (event.target.querySelector('#drakeDrag')) {
             jRockBeats.innerHTML = wrongRapDrag[2];
             returnRapDrags.returnJrock();
             returnRapDrags.returnDrake();
+            rightRapTracker.pop();
         } else if (event.target.querySelector('#pushaDrag')) {
             jRockBeats.innerHTML = wrongRapDrag[2]   
             returnRapDrags.returnJrock();
             returnRapDrags.returnPusha();
+            rightRapTracker.pop();
         } else if (event.target.querySelector('#quikDrag')) {
             jRockBeats.innerHTML = wrongRapDrag[2]
             returnRapDrags.returnJrock();
             returnRapDrags.returnQuik();
+            rightRapTracker.pop();
         } else if (event.target.querySelector('#gottiDrag')) {
             jRockBeats.innerHTML = wrongRapDrag[2]
             returnRapDrags.returnJrock();
             returnRapDrags.returnKurupt();
+            rightRapTracker.pop();
         }
        },
 
@@ -154,23 +158,27 @@ const rapperDrop = {
         if(event.target.querySelector('#drakeDrag')) {
             //drakeBeats.innerHTML = rightRapDrag[0];
             rightRapAns.drakeRight();
-            rightRapTracker.push('Drake!')
+            rightRapTracker.push('point')
         } else if (event.target.querySelector('#jRockDrag')) {
             drakeBeats.innerHTML = wrongRapDrag[3]
             returnRapDrags.returnDrake();
             returnRapDrags.returnJrock();
+            rightRapTracker.pop();
         } else if (event.target.querySelector('#pushaDrag')) {
             drakeBeats.innerHTML = wrongRapDrag[3]
             returnRapDrags.returnDrake();
             returnRapDrags.returnPusha();
+            rightRapTracker.pop();
         } else if (event.target.querySelector('#quikDrag')) {
             drakeBeats.innerHTML = wrongRapDrag[3]
             returnRapDrags.returnDrake();
             returnRapDrags.returnQuik();
+            rightRapTracker.pop();
         } else if (event.target.querySelector('#gottiDrag')) {
             drakeBeats.innerHTML = wrongRapDrag[3]
             returnRapDrags.returnDrake();
             returnRapDrags.returnKurupt();
+            rightRapTracker.pop();
         }
        },
 
@@ -184,23 +192,27 @@ const rapperDrop = {
 
          if(event.target.querySelector('#pushaDrag')) {
              rightRapAns.pushaRight();
-             rightRapTracker.push('Pusha Push!');
+             rightRapTracker.push('point');
          } else if (event.target.querySelector('#drakeDrag')) {
              pushaBeats.innerHTML = wrongRapDrag[0];
              returnRapDrags.returnPusha();
              returnRapDrags.returnDrake();
+             rightRapTracker.pop();
          } else if (event.target.querySelector('#jRockDrag')) {
             pushaBeats.innerHTML = wrongRapDrag[0];
             returnRapDrags.returnPusha();
             returnRapDrags.returnJrock();
+            rightRapTracker.pop();
          } else if (event.target.querySelector('#quikDrag')) {
             pushaBeats.innerHTML = wrongRapDrag[0];
             returnRapDrags.returnPusha();
             returnRapDrags.returnQuik();
+            rightRapTracker.pop();
          } else if (event.target.querySelector('#gottiDrag')) {
             pushaBeats.innerHTML = wrongRapDrag[0];
             returnRapDrags.returnPusha();
             returnRapDrags.returnKurupt();
+            rightRapTracker.pop();
          }
     },
 
@@ -213,23 +225,27 @@ const rapperDrop = {
 
          if(event.target.querySelector('#quikDrag')) {
             rightRapAns.quikRight();
-            rightRapTracker.push('DJ Quik!');
+            rightRapTracker.push('Point');
          } else if (event.target.querySelector('#jRockDrag')) {
             quikBeats.innerHTML =  wrongRapDrag[1];
             returnRapDrags.returnQuik();
-            returnRapDrags.returnJrock()
+            returnRapDrags.returnJrock();
+            rightRapTracker.pop();
          } else if (event.target.querySelector('#drakeDrag')) {
             quikBeats.innerHTML =  wrongRapDrag[1];
             returnRapDrags.returnQuik();
-            returnRapDrags.returnDrake() 
+            returnRapDrags.returnDrake();
+            rightRapTracker.pop(); 
          } else if(event.target.querySelector('#pushaDrag')) {
             quikBeats.innerHTML =  wrongRapDrag[1];
             returnRapDrags.returnQuik();
             returnRapDrags.returnPusha();
+            rightRapTracker.pop();
          } else if(event.target.querySelector('#gottiDrag')) {
             quikBeats.innerHTML =  wrongRapDrag[1];
             returnRapDrags.returnQuik();
             returnRapDrags.returnKurupt();
+            rightRapTracker.pop();
          }
     },
 
@@ -243,22 +259,26 @@ const rapperDrop = {
          if(event.target.querySelector('#gottiDrag')) {
             rightRapAns.kuruptRight();
             rightRapTracker.push('Kurupt Young Gotti!');
-         } else if (event.target.querySelector('#jRockDrag')) {
+         } else if (event.target.querySelector('Point')) {
              yGottiBeats.innerHTML = wrongRapDrag[4];
              returnRapDrags.returnKurupt();
              returnRapDrags.returnJrock();
+             rightRapTracker.pop();
          } else if (event.target.querySelector('#drakeDrag')) {
              yGottiBeats.innerHTML = wrongRapDrag[4];
              returnRapDrags.returnKurupt();
              returnRapDrags.returnDrake();
+             rightRapTracker.pop();
          } else if (event.target.querySelector('#pushaDrag')) {
             yGottiBeats.innerHTML = wrongRapDrag[4];
             returnRapDrags.returnKurupt();
             returnRapDrags.returnPusha();
+            rightRapTracker.pop();
          } else if (event.target.querySelector('#quikDrag')) {
              yGottiBeats.innerHTML = wrongRapDrag[4];
              returnRapDrags.returnKurupt();
              returnRapDrags.returnQuik();
+             rightRapTracker.pop();
          }
     }
 };
