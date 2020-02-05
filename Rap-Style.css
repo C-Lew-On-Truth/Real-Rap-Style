@@ -26,12 +26,11 @@ img {
 }
 
 .grid-container {
-    position: relative;
+   
     display: grid;
-    margin-top: 25px;
+    margin: 25px;
     justify-content: space-evenly;
     grid-template-columns: 20%  20%   20%   20%  20% ;
-    grid-gap: 10px;
     justify-items: center;
 }
 
@@ -41,6 +40,7 @@ img {
     height:300px;
     cursor: pointer;
     font-size: 30px;
+    text-align: center;
 }
 .stop-music {
     margin-top: 30px;
@@ -97,7 +97,5 @@ img {
         display: grid;
         margin: 20px;
         grid-template-columns: 100%;
-    }
-
-   
+    } 
 }
