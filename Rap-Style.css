@@ -92,8 +92,10 @@ img {
     cursor: pointer;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 950px) {
     .grid-container {
+        display: grid;
+        margin: 20px;
         grid-template-columns: 100%;
     }
 

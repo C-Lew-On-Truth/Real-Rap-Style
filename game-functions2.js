@@ -26,6 +26,7 @@ let nextPage = document.getElementById('nextPage');
 nextPage.hidden = true;
 nextPage.onclick = function() {
     alert(rightRapTracker)
+    alert('Yes you know some things!')
 }
 
 const wrongRapDrag = [

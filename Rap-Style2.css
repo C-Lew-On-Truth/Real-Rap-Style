@@ -18,7 +18,6 @@ body {
     right: 5%;
     padding: 10px;
     justify-items: center;
-    margin: 20px;
 }
 
 .grid-items {
@@ -44,10 +43,10 @@ body {
     position: absolute;
     float: left;
     width: 30%;
-    height: 350px;
+    height: 350px auto;
     border: red 2px dashed;
     text-align: center;
-    margin:20px;
+    padding:10px;
 }
 
 #yellowDrop, #redDrop, #blueDrop, #greenDrop, #jRock-plays {
@@ -55,9 +54,25 @@ body {
     color: white;
 }
 
-@media screen and (max-width: 650px) {
-    .grid-items .grid-items2 {
-        width: 100%;
-        height: 100%;
+@media screen and (max-width: 992px) {
+    .grid-items  {
+        width: 100%; 
     }
+    .grid-items2 {
+        width: 100%;
+    }
+
+    #next-p
+
+    /*
+    .grid-container {
+        width: 100%;
+        position: auto;
+    }
+
+    #message {
+        width: 100%;
+        position: auto;
+    }
+    */
 }
