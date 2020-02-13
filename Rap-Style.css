@@ -42,6 +42,7 @@ img {
     font-size: 30px;
     text-align: center;
 }
+
 .stop-music {
     margin-top: 30px;
     border: dashed black 2px;
@@ -95,7 +96,7 @@ img {
 @media screen and (max-width: 950px) {
     .grid-container {
         display: grid;
-        margin: 20px;
         grid-template-columns: 100%;
+        width: 100%;
     } 
 }
