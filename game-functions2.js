@@ -294,7 +294,7 @@ const rapperDrop = {
             yGottiBeats.removeEventListener('drop', rapperDrop.kuruptDrop);
             playKurupt()
           
-         } else if (event.target.querySelector('Point')) {
+         } else if (event.target.querySelector('#jRockDrag')) {
              yGottiBeats.innerHTML = wrongRapDrag[4];
              returnRapDrags.returnKurupt();
              returnRapDrags.returnJrock();
