@@ -25,8 +25,8 @@ let jRockAns = document.getElementById('jRockDrag');
 let nextPage = document.getElementById('nextPage');
 nextPage.hidden = true;
 nextPage.onclick = function() {
-    alert(rightRapTracker)
-    alert('Yes you know some things!')
+    alert('NEXT CHALLENGE COMING SOON!')
+    //alert('Yes you know some things!')
 }
 
 const wrongRapDrag = [
@@ -51,25 +51,44 @@ const rightRapDrag = [
 let rightRapAns = {
     drakeRight: function() {
         drakeBeats.innerHTML = "<br>Yuuup Thats Drizzy!";
+        drakeBeats.style.backgroundColor = "white";
+        drakeBeats.style.color = "black";
+        this.rightMusicPlays()
         
     },
     jRockRight: function() {
         jRockBeats.innerHTML = "<br>Yuuup!<br>Thats Jay Rock<br>Straight Thugged Out!";
+        jRockBeats.style.backgroundColor = "white";
+        jRockBeats.style.color = "black";
+        this.rightMusicPlays()
         
     },
 
     quikRight: function() {
-        quikBeats.innerHTML = "<br>DJ Quik! <br><br>Thats Old Skool!"
+        quikBeats.innerHTML = "<br>DJ Quik! <br><br>Thats Old Skool!";
+        quikBeats.style.backgroundColor = "white";
+        quikBeats.style.color = "black";
+        this.rightMusicPlays()
     },
 
     pushaRight: function() {
         pushaBeats.innerHTML = "<br><br>Pusha Push!";
+        pushaBeats.style.backgroundColor = "white";
+        pushaBeats.style.color = "black";
+        this.rightMusicPlays()
     },
 
     kuruptRight: function() {
         yGottiBeats.innerHTML = "<br><br>Kurupt Young Gotti!";
         yGottiBeats.style.backgroundColor = "white";
         yGottiBeats.style.color = "black";
+        this.rightMusicPlays()
+    },
+
+    rightMusicPlays: function() {
+        if(playJayRock || playDrake || playKurupt || playPushaT || playQuik) {
+            jRock.pause() || drake.pause() || youngGotti.pause() || pushaT.pause() || quik.pause() 
+        }
     }
 
 
@@ -127,7 +146,7 @@ const rapperDrop = {
        rightRapAns.jRockRight()
        rightRapTracker.push('point')
        jRockBeats.removeEventListener('drop', rapperDrop.jRockDrop);
-       jRockBeats.play()
+       playJayRock() 
 
         } else if (event.target.querySelector('#drakeDrag')) {
             jRockBeats.innerHTML = wrongRapDrag[2];
@@ -164,7 +183,7 @@ const rapperDrop = {
             rightRapAns.drakeRight();
             rightRapTracker.push('point')
             drakeBeats.removeEventListener('drop', rapperDrop.drakeDrop);
-            drakeBeats.play()
+            playDrake()
 
         } else if (event.target.querySelector('#jRockDrag')) {
             drakeBeats.innerHTML = wrongRapDrag[3]
@@ -201,7 +220,7 @@ const rapperDrop = {
              rightRapAns.pushaRight();
              rightRapTracker.push('point');
              pushaBeats.removeEventListener('drop', rapperDrop.pushaDrop);
-             pushaT.play()
+             playPushaT()
 
          } else if (event.target.querySelector('#drakeDrag')) {
              pushaBeats.innerHTML = wrongRapDrag[0];
@@ -267,18 +286,14 @@ const rapperDrop = {
          let pushaTData = event.dataTransfer.getData('text');  
          event.target.appendChild(document.getElementById(pushaTData)); 
          console.log('pusha T stops playing');
-         youngGotti.pause();
+        
 
          if(event.target.querySelector('#gottiDrag')) {
             rightRapAns.kuruptRight();
             rightRapTracker.push('Kurupt Young Gotti!');
             yGottiBeats.removeEventListener('drop', rapperDrop.kuruptDrop);
-            youngGotti.play()
-            /*
-            if(youngGotti.play()) {
-                jRockBeats.pause() || drakeBeats.pause() || quikBeats.pause() || pushaBeats.pause()
-            }
-            */
+            playKurupt()
+          
          } else if (event.target.querySelector('Point')) {
              yGottiBeats.innerHTML = wrongRapDrag[4];
              returnRapDrags.returnKurupt();
