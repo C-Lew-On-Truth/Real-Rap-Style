@@ -7,34 +7,36 @@ header {
 
 body {
     text-align: center;
-    background-color: gray;
+    background-color: black;
     color: white;
+    font-family: Comic Sans MS
 }
 
 .instructions {
     margin-top: 5px;
-    color: blue;
+    color: white;
     font-size: 20px;
 }
 
-.playStop-button {
+.playStopButton {
     margin-top: 20px;
     width: 90px;
     height: 40px;
     border: black 2px solid;
     text-align: auto;
-    border-radius: 
 }
 
 .carousel-holder {
-    display: block;
+    
+    margin: auto;
+    position: relative;
     margin-top: 30px;
     margin-left: auto;
     margin-right: auto;
     justify-content: center;
     width: 40%;
     height: 50%;
-    border: 10px dashed black;
+    border: ridge 10px white;
 }
 
 img {
@@ -44,4 +46,8 @@ img {
 }
 
 
+.rapperName {
+   margin-top: 40px;
+   font-size: 30px
+}
 
