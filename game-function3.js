@@ -4,15 +4,6 @@ let playVince = document.querySelector('#vinceStaples')
 let stopButton = "stop";
 let playButton = "play";
 
-playStopBtn.onclick = function() {
-    playVince.play()
-    playStopBtn.innerHTML = "<p id='stop'>Stop</p>"
-}
-
-stopButton.onclick = function() {
-    playVince.pause()
-    playStopBtn.innerHTML = "<p id='play'>Play</p>"
-}
 
 let rapPicIndex = 0;
 
@@ -38,7 +29,8 @@ function rapGameSlides() {
     }
 }
 
-window.onload = rapGameSlides;
+document.addEventListener('DOMContentLoaded', rapGameSlides)
+//window.onload = rapGameSlides;
 
 
 let earlSweatShirt = document.getElementById('rapper1')
@@ -47,11 +39,15 @@ let childishGambino = document.getElementById('rapper3')
 let vinceStaples = document.getElementById('rightRapper')
 let boogie = document.getElementById('rapper4')
 
-
-
-
-
-
-
+playStopBtn.onclick = function() {
+    let testLog = document.querySelector('.playStopButton')
+    if(testLog.innerHTML === "Play") {
+        playVince.play()
+        testLog.innerHTML = "Stop"
+    } else {
+        testLog.innerHTML = "Play"
+        playVince.pause()
+    }
+}
 
 
