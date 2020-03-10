@@ -50,4 +50,19 @@ playStopBtn.onclick = function() {
     }
 }
 
+earlSweatShirt.onclick = function() {
+    alert('Nope!')
+}
+
+tylerTheCreator.onclick = function() {
+    alert('Wrong!')
+}
+
+childishGambino.onclick = function() {
+    alert('Way off')
+}
+
+boogie.onclick = function() {
+    alert('Negative')
+}
 
