@@ -28,10 +28,11 @@ img {
 .grid-container {
    
     display: grid;
-    margin: 25px;
+    margin-top: 2% ;
     justify-content: space-evenly;
     grid-template-columns: 20%  20%   20%   20%  20% ;
     justify-items: center;
+
 }
 
 .container-items {
@@ -73,14 +74,13 @@ img {
     color: red;
     width: 100px;
     height: 50px;
-    justify-items: center;
     cursor: pointer;
-    text-align: center;
-
+    margin-left:auto;
+    margin-right: auto;
 }
 
 #next-challenge {
-    margin-top: .5%;
+    margin-top: 2%;
     border: dashed black 2px;
     border-radius: 70%;
     font-family: sans-serif;
@@ -89,14 +89,34 @@ img {
     color: red;
     width: 100px;
     height: 50px;
-    justify-items: center;
+    margin-left:auto;
+    margin-right: auto;
     cursor: pointer;
 }
 
 @media screen and (max-width: 950px) {
+
+    .rap-bars {
+        font-size: 20px;
+    }
     .grid-container {
         display: grid;
         grid-template-columns: 100%;
+        margin-top: 5%;
         width: 100%;
+        grid-gap:40px;
     } 
+
+    .container-items {
+        width: 60%;
+    }
+
+    #next-challenge {
+        margin-top: 5%;
+    }
+
+    #restart {
+        margin-top: 20%;
+      
+    }
 }
