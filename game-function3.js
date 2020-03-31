@@ -21,6 +21,8 @@ boogie.onclick = function() {
     alert('Negative')
 }
 
+
+
 //Toggle Player
 let playStopBtn = document.querySelector('.playStopButton');
 let userSelect = document.querySelector('.rapSelect');
@@ -36,10 +38,23 @@ stopButton.onclick = function() {
     playVince.pause()
 }
 
-
-$('button').click(function() {
-    $('.playStopButton').toggle()
+$(document).ready(function() {
+    $('button').click(function() {
+        $('.playStopButton').toggle()
+    })
 })
+
+
+
+
+function musicOver() {
+    stopButton.style.display = "none";
+    playButton.style.display = "inline-block";
+    playButton.style.textAlign = "center";
+    console.log('seen');
+}
+
+
 
 
 //Infinte Carousel for Challenge 3 Selection
