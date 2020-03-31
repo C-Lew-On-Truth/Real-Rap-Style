@@ -26,6 +26,14 @@ body {
     text-align: auto;
 }
 
+#playStopButton2 {
+    margin-top: 20px;
+    width: 90px;
+    height: 40px;
+    border: black 2px solid;
+    text-align: auto;
+}
+
 .carousel-holder {
     
     margin: auto;

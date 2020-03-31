@@ -1,10 +1,48 @@
+//Wrong Rapper Choice Events
+let earlSweatShirt = document.getElementById('rapper1')
+let tylerTheCreator = document.getElementById('rapper2')
+let childishGambino = document.getElementById('rapper3')
+let vinceStaples = document.getElementById('rightRapper')
+let boogie = document.getElementById('rapper4')
+
+earlSweatShirt.onclick = function() {
+    alert('Nope!')
+}
+
+tylerTheCreator.onclick = function() {
+    alert('Wrong!')
+}
+
+childishGambino.onclick = function() {
+    alert('Way off')
+}
+
+boogie.onclick = function() {
+    alert('Negative')
+}
+
+//Toggle Player
 let playStopBtn = document.querySelector('.playStopButton');
 let userSelect = document.querySelector('.rapSelect');
-let playVince = document.querySelector('#vinceStaples')
-let stopButton = "stop";
-let playButton = "play";
+let playVince = document.querySelector('#vinceStaples');
+let playButton = document.getElementById('play');
+let stopButton = document.getElementById('stop');
+
+playButton.onclick = function() {
+    playVince.play()
+}
+
+stopButton.onclick = function() {
+    playVince.pause()
+}
 
 
+$('button').click(function() {
+    $('.playStopButton').toggle()
+})
+
+
+//Infinte Carousel for Challenge 3 Selection
 let rapPicIndex = 0;
 
 function rapGameSlides() {
@@ -28,41 +66,4 @@ function rapGameSlides() {
         alert('You know about Vince Staples!')
     }
 }
-
 document.addEventListener('DOMContentLoaded', rapGameSlides)
-//window.onload = rapGameSlides;
-
-
-let earlSweatShirt = document.getElementById('rapper1')
-let tylerTheCreator = document.getElementById('rapper2')
-let childishGambino = document.getElementById('rapper3')
-let vinceStaples = document.getElementById('rightRapper')
-let boogie = document.getElementById('rapper4')
-
-playStopBtn.onclick = function() {
-    let testLog = document.querySelector('.playStopButton')
-    if(testLog.innerHTML === "Play") {
-        playVince.play()
-        testLog.innerHTML = "Stop"
-    } else {
-        testLog.innerHTML = "Play"
-        playVince.pause()
-    }
-}
-
-earlSweatShirt.onclick = function() {
-    alert('Nope!')
-}
-
-tylerTheCreator.onclick = function() {
-    alert('Wrong!')
-}
-
-childishGambino.onclick = function() {
-    alert('Way off')
-}
-
-boogie.onclick = function() {
-    alert('Negative')
-}
-
