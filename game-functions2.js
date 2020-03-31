@@ -37,16 +37,6 @@ const wrongRapDrag = [
     '<br>You call <br>yourself a <br>contender?'
 ];
 
-/*
-const rightRapDrag = [
-    '<br><br>Yuuup Thats Drizzy!',
-    'Kurupt Young Gotti!',
-    'DJ Quik! Thats Old Skool!',
-    '<br>Yuuup!<br>Thats Jay Rock<br>Straight Thugged Out!',
-    'Pusha Push!'
-];
-*/
-
 
 let rightRapAns = {
     drakeRight: function() {

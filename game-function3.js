@@ -21,8 +21,6 @@ boogie.onclick = function() {
     alert('Negative')
 }
 
-
-
 //Toggle Player
 let playStopBtn = document.querySelector('.playStopButton');
 let userSelect = document.querySelector('.rapSelect');

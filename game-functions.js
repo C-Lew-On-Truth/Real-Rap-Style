@@ -6,15 +6,10 @@ import { outkastMusic, outkastBeats, playOutkast } from './music-with-game.js';
 import { jayMusic, jayBeats, playJayZ } from './music-with-game.js';
 import { stopMusic } from './music-with-game.js';
 
-//Variables for data events
-let pacWrong = document.getElementById('imageSwitch1');
-let kuruptWrong = document.getElementById('imageSwitch2');
-let outkastWrong = document.getElementById('imageSwitch3');
-let jayWrong = document.getElementById('imageSwitch4');
-let fortyRight = document.getElementById('imageRight');
+//Variables for game
 let reStartBtn = document.getElementById('restart');
 let nextLevel = document.getElementById('next-challenge');
-let questionsGos = document.getElementById('noMoreQuestions');
+let questionsGone = document.getElementById('noMoreQuestion');
 let rightAnsMessage = document.getElementById('rightAns1');
 
 let wrongPac = document.createElement('div');
@@ -26,7 +21,15 @@ nextLevel.hidden = true;
 stopMusic.hidden = true;
 rightAnsMessage.hidden = true;
 
-//functions for user choices
+//User Selection Functions and the Variables to Identify Them.
+
+let pacWrong = document.getElementById('imageSwitch1');
+let kuruptWrong = document.getElementById('imageSwitch2');
+let outkastWrong = document.getElementById('imageSwitch3');
+let jayWrong = document.getElementById('imageSwitch4');
+let fortyRight = document.getElementById('imageRight');
+
+
 function displayWrongPac() {
   pacWrong.replaceChild(wrongPac, pacBeats);
   pacWrong.style.border = "red dashed 6px";
@@ -71,7 +74,7 @@ function displayWrongJayZ() {
   console.log('Jay Z is Wrong');
 }
 
-function nextPage() {
+function restartPage() {
   window.location.reload(true);
   console.log('you see me')
 }
@@ -79,7 +82,7 @@ function nextPage() {
 function rightAnswer() {
   if (fortyBeats) {
     nextLevel.hidden = false;
-    questionsGos.hidden = true;
+    questionsGone.hidden = true;
     rightAnsMessage.hidden = false;
     fortyRight.style.border = "white 6px dashed";
     pacBeats.removeEventListener('click', displayWrongPac);
@@ -100,7 +103,7 @@ kuruptBeats.addEventListener('click', displayWrongKurupt);
 outkastBeats.addEventListener('click', displayWrongOutkast);
 jayBeats.addEventListener('click', displayWrongJayZ);
 fortyBeats.addEventListener('click', rightAnswer);
-reStartBtn.addEventListener('click', nextPage);
+reStartBtn.addEventListener('click', restartPage);
 
 nextLevel.onclick = function() {
   window.location.href = "Challenge2.html"

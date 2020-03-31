@@ -6,6 +6,7 @@ body {
     justify-items: center;
     background-color: black;
     color: white;
+    font-family: Comic Sans MS
 }
 .grid-container {
     display: grid;
@@ -15,9 +16,10 @@ body {
     width: 60%;
     height: 700px;
     position: absolute;
-    right: 5%;
-    padding: 10px;
+    right: 4%;
+    margin-top: 2%;
     justify-items: center;
+    padding: 2%;
 }
 
 .grid-items {
@@ -26,6 +28,7 @@ body {
     height: 50px;
     text-align: center;
     margin: auto;
+    
 }
 
 /* test */
@@ -35,18 +38,38 @@ body {
     height: 100px;
     text-align: center;
     margin: auto;
+    
 }
 
 
 
-#message {
+.instructions-box {
+    display: flex;
     position: absolute;
+    flex-flow: column wrap;
+    justify-content: center;
+    justify-items: space-evenly;
+    margin-top: 2%;
     float: left;
+    left: 2%;
     width: 30%;
-    height: 350px auto;
-    border: red 2px dashed;
     text-align: center;
     padding:10px;
+}
+
+.instruction-message {
+    margin: auto;
+    border: red 2px dashed;
+    width: 100%;
+    
+}
+
+.instruction-action-box {
+    margin-top: 10%;
+    border: green 5px ridge;
+    width: 100%;
+    height: 373px;
+    margin-bottom: 1%;
 }
 
 #yellowDrop, #redDrop, #blueDrop, #greenDrop, #jRock-plays {
@@ -61,6 +84,12 @@ body {
     .grid-items2 {
         width: 100%;
     }
+
+    .main-box {
+        background-color: white;
+    }
+
+}
 
 
     /*
