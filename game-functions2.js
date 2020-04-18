@@ -128,7 +128,7 @@ const rapperDrop = {
         event.preventDefault();
         let jdata = event.dataTransfer.getData('text');
         event.target.appendChild(document.getElementById(jdata));
-       console.log('Jay Rock does not play');
+        console.log('Jay Rock does not play');
         //jRock.pause();
 
        if(event.target.querySelector('#jRockDrag')) {

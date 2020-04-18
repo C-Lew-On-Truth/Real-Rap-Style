@@ -1,24 +1,46 @@
 //Wrong Rapper Choice Events
-let earlSweatShirt = document.getElementById('rapper1')
-let tylerTheCreator = document.getElementById('rapper2')
-let childishGambino = document.getElementById('rapper3')
-let vinceStaples = document.getElementById('rightRapper')
-let boogie = document.getElementById('rapper4')
+let earlSweatShirt = document.getElementById('rapper1');
+let tylerTheCreator = document.getElementById('rapper2');
+let childishGambino = document.getElementById('rapper3');
+let vinceStaples = document.getElementById('rightRapper');
+let boogie = document.getElementById('rapper4');
 
-earlSweatShirt.onclick = function() {
-    alert('Nope!')
+//Alert Box Responses 
+let wrongAnsKey = document.getElementById('ansWrong');
+let rapSelect = document.querySelector('.rapSelect');
+let alertBox = document.querySelector('.alertBoxes');
+let rapName = document.querySelector('.rapperName');
+let alertGo = document.querySelector('.alertGos');
+let alertMessage = document.querySelector('.alertMessage');
+
+
+let wrongMessages = [
+    'SMH...You seriously thought that was the answer?',
+    'Wow dude. Your pretty wack!!!',
+    'Nah nah...you should had quit a long time ago...',
+    'Sorry Buddy....try again...'
+];
+
+
+earlSweatShirt.onclick = function() {    
+    alertBox.style.display = "block";
+    alertMessage.innerHTML = wrongMessages[0]  
+}
+tylerTheCreator.onclick = function() {    
+    alertBox.style.display = "block";
+    alertMessage.innerHTML = wrongMessages[2]  
+}
+boogie.onclick = function() {    
+    alertBox.style.display = "block";
+    alertMessage.innerHTML = wrongMessages[1]  
+}
+childishGambino.onclick = function() {    
+    alertBox.style.display = "block";
+    alertMessage.innerHTML = wrongMessages[3]  
 }
 
-tylerTheCreator.onclick = function() {
-    alert('Wrong!')
-}
-
-childishGambino.onclick = function() {
-    alert('Way off')
-}
-
-boogie.onclick = function() {
-    alert('Negative')
+alertGo.onclick = function() {
+    alertBox.style.display = "none";
 }
 
 //Toggle Player
@@ -37,13 +59,10 @@ stopButton.onclick = function() {
 }
 
 $(document).ready(function() {
-    $('button').click(function() {
+    $('#play, #stop').click(function() {
         $('.playStopButton').toggle()
     })
 })
-
-
-
 
 function musicOver() {
     stopButton.style.display = "none";
@@ -51,8 +70,6 @@ function musicOver() {
     playButton.style.textAlign = "center";
     console.log('seen');
 }
-
-
 
 
 //Infinte Carousel for Challenge 3 Selection
@@ -66,17 +83,20 @@ function rapGameSlides() {
         rapPics[i].style.display = "none";
     }
 
+
     rapPicIndex++;
     if (rapPicIndex > rapPics.length) {
         rapPicIndex = 1;
     }
 
     rapPics[rapPicIndex - 1].style.display = "block";
-    let vinceRight = setTimeout(rapGameSlides, 3000);
+    let vinceRight = window.setTimeout(rapGameSlides, 3000);
 
     vinceStaples.onclick = function() {
         clearTimeout(vinceRight);
-        alert('You know about Vince Staples!')
+        alertBox.style.display = "block";
+        alertMessage.innerHTML = "You know about Vince Staple!";
+        alertGo.innerHTML = "Exit";
     }
 }
-document.addEventListener('DOMContentLoaded', rapGameSlides)
+window.addEventListener('DOMContentLoaded', rapGameSlides)

@@ -1,13 +1,14 @@
 <html>
-    <title>Challenge 3</title>
-    <link rel="stylesheet" type="text/css" href="Rap-Style3.css">
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<title>Challenge 3</title>
+<link rel="icon" href="data:;base64,=">
+<link rel="stylesheet" type="text/css" href="Rap-Style3.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
 
 <audio id="vinceStaples" onended="musicOver()">
     <source src="Music/Vince Staples - 745 (Audio).mp3" type="audio/mpeg">
 </audio>
 
-    
+
 <body>
     <header>Challenge 3</header>
     <div class="instructions">
@@ -15,17 +16,18 @@
         2.) Click on the picture of the rapper behind the Track!
     </div>
 
-<button id="play"; class="playStopButton">
-    Play Music
-</button>
+    <button id="play" ; class="playStopButton">
+        Play Music
+    </button>
 
-<button id="stop" class="playStopButton"; style="display: none">
-    Stop Music
-</button>
+    <button id="stop" class="playStopButton" ; style="display: none">
+        Stop Music
+    </button>
 
-<div class="carousel-holder"> 
+    <div class="carousel-holder">
 
-        <div class="rapSelect" >
+
+        <div class="rapSelect">
             <img id="rapper1" src="PICTURES/Earl_Sweatshirt.jpg">
             <div class="rapperName">Earl Sweatshirt</div>
         </div>
@@ -36,7 +38,7 @@
         </div>
 
         <div class="rapSelect">
-            <img id="rapper3"src="PICTURES/Childish_Gambino.jpg">
+            <img id="rapper3" src="PICTURES/Childish_Gambino.jpg">
             <div class="rapperName">Childish Gambino</div>
         </div>
 
@@ -46,16 +48,21 @@
         </div>
 
         <div class="rapSelect">
-            <img id="rapper4"src="PICTURES/Boogie.jpg">
+            <img id="rapper4" src="PICTURES/Boogie.jpg">
             <div class="rapperName"> Boogie</div>
         </div>
-</div>
+        
+    </div>
 
+    <div id="ansWrong" class="alertBoxes">
+        <p class="alertMessage"></p>
+        <button class="alertGos">Keep Playing</button>
+    </div>
 
-<script src="game-function3.js"></script>
+    <script src="game-function3.js"></script>
 
 </body>
 
 
-    
+
 </html>
