@@ -5,13 +5,14 @@ let childishGambino = document.getElementById('rapper3');
 let vinceStaples = document.getElementById('rightRapper');
 let boogie = document.getElementById('rapper4');
 
-//Alert Box Responses 
+//Alert Box Data 
 let wrongAnsKey = document.getElementById('ansWrong');
 let rapSelect = document.querySelector('.rapSelect');
-let alertBox = document.querySelector('.alertBoxes');
 let rapName = document.querySelector('.rapperName');
+let alertBox = document.querySelector('.alertBoxes');
 let alertGo = document.querySelector('.alertGos');
 let alertMessage = document.querySelector('.alertMessage');
+
 
 
 let wrongMessages = [
@@ -22,22 +23,21 @@ let wrongMessages = [
 ];
 
 
-earlSweatShirt.onclick = function() {    
+let holder = document.querySelector('.carousel-holder')
+
+function holderFunc () {
     alertBox.style.display = "block";
-    alertMessage.innerHTML = wrongMessages[0]  
+    alertMessage.innerHTML = wrongMessages[Math.floor(Math.random() * wrongMessages.length)]
 }
-tylerTheCreator.onclick = function() {    
-    alertBox.style.display = "block";
-    alertMessage.innerHTML = wrongMessages[2]  
+
+holder.addEventListener('click', holderFunc)
+
+function vinceMessage() {
+    holder.removeEventListener('click', holderFunc)
 }
-boogie.onclick = function() {    
-    alertBox.style.display = "block";
-    alertMessage.innerHTML = wrongMessages[1]  
-}
-childishGambino.onclick = function() {    
-    alertBox.style.display = "block";
-    alertMessage.innerHTML = wrongMessages[3]  
-}
+
+vinceStaples.addEventListener('click', vinceMessage)
+
 
 alertGo.onclick = function() {
     alertBox.style.display = "none";
