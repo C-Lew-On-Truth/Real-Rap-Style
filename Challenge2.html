@@ -1,7 +1,11 @@
+<!DOCTYPE html>
 <html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:;base64,=">
+    <link rel="stylesheet" type="text/css" href="Rap-Style2.css">
+</head>
 <title>Rap Challenge 2</title>
-<link rel="icon" href="data:;base64,=">
-<link rel="stylesheet" type="text/css" href="Rap-Style2.css">
 
 <audio id="jRock-audio">
     <source src="Music/Jay Rock - ES Tales (Redemption).mp3" type="audio/mpeg">
@@ -21,85 +25,85 @@
 
 <body>
 
-<div class="main-box">
-    <div class="instructions-box">
-       
-        <div class="instruction-message">
-            
-            <p>Hip Hop don't stop cuz we...</p>
-            <h1>Drag and Drop</h1>
-            <p>Listen to each song by clicking each box to the right
-                Then drag the right rapper to the appropriate song!
-            </p>
-            <button id="stop-music2">STOP Music</button><br><br>
-            <button id="nextPage">Next Challenge</button><br><br>
+    <div class="main-box">
+        <div class="instructions-box">
+
+            <div class="instruction-message">
+
+                <p>Hip Hop don't stop cuz we...</p>
+                <h1>Drag and Drop</h1>
+                <p>Listen to each song by clicking each box to the right
+                    Then drag the right rapper to the appropriate song!
+                </p>
+                <button id="stop-music2">STOP Music</button><br><br>
+                <button id="nextPage">Next Challenge</button><br><br>
+
+            </div>
+
+            <div class="instruction-action-box">
+                <img width="100%" ; height="100%" ; src="Random-Media/giphy.gif" />
+            </div>
 
         </div>
 
-        <div class="instruction-action-box">
-            <img width="100%"; height="100%"; src="Random-Media/giphy.gif"/>
+        <div class="game-container"></div>
+
+        <div class="grid-container">
+
+            <div class="grid-items" id="kuruptStartBox">
+                <p draggable="true" id="gottiDrag">
+                    Kurupt
+                </p>
+            </div>
+            <div class="grid-items2" id="drake-plays">
+                Click box to play!
+            </div>
+
+            <div class="grid-items" id="pushaStartBox">
+                <p draggable="true" id="pushaDrag">
+                    Pusha T
+                </p>
+            </div>
+
+            <div class="grid-items2" id="yGotti-plays">
+                Click box to play!
+            </div>
+            <div class="grid-items" id="drakeStartBox">
+                <p draggable="true" id="drakeDrag">
+                    Drake
+                </p>
+            </div>
+
+            <div class="grid-items2" id="quik-plays">
+                Click box to play!
+            </div>
+
+            <div class="grid-items" id="jRockStartBox">
+                <p draggable="true" id="jRockDrag">
+                    Jay Rock
+                </p>
+            </div>
+            <div class="grid-items2" id="pusha-plays">
+                Click box to play!
+            </div>
+
+            <div class="grid-items" id="quikStartBox">
+                <p draggable="true" id="quikDrag">
+                    Dj Quik
+                </p>
+            </div>
+
+            <div class="grid-items2" id="jRock-plays">
+                Click box to play!
+            </div>
         </div>
 
     </div>
-
-<div class="game-container"></div>
-
-<div class="grid-container">
-
-    <div class="grid-items" id="kuruptStartBox">
-        <p draggable="true" id="gottiDrag">
-            Kurupt
-        </p>
-    </div>
-    <div class="grid-items2" id="drake-plays">
-        Click box to play!
     </div>
 
-    <div class="grid-items" id="pushaStartBox">
-        <p draggable="true" id="pushaDrag">
-           Pusha T 
-        </p>
-    </div>
 
-    <div class="grid-items2" id="yGotti-plays">
-        Click box to play!
-    </div>
-    <div class="grid-items" id="drakeStartBox">
-        <p draggable="true" id="drakeDrag">
-            Drake
-        </p>
-    </div>
-
-    <div class="grid-items2" id="quik-plays">
-        Click box to play!
-    </div>
-
-    <div class="grid-items" id="jRockStartBox">
-        <p draggable="true" id="jRockDrag">
-            Jay Rock
-        </p>
-    </div>
-    <div class="grid-items2" id="pusha-plays">
-        Click box to play!
-    </div>
-
-    <div class="grid-items" id="quikStartBox" >
-        <p draggable="true" id="quikDrag">
-            Dj Quik
-        </p>
-    </div>
-
-    <div class="grid-items2" id="jRock-plays">
-        Click box to play!
-    </div>
-</div>
-
-</div>
-</div>
-
-
-<script type="module" src="music-with-game2.js"></script>
-<script type="module" src="game-functions2.js"></script>
+    <script type="module" src="music-with-game2.js"></script>
+    <script type="module" src="game-functions2.js"></script>
 
 </body>
 
