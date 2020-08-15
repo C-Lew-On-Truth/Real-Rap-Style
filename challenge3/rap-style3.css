@@ -69,9 +69,10 @@ img {
     margin: 15% auto;
     font-size: 30px;
     text-align: center;
+    padding: 2%px;
 }
 
-.alertGos {
+.alertGos, .nextLevel {
     position: relative;
     margin: auto;
     font-size: 20px;

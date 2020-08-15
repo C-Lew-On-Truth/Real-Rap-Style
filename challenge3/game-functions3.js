@@ -10,10 +10,11 @@ let wrongAnsKey = document.getElementById('ansWrong');
 let rapSelect = document.querySelector('.rapSelect');
 let rapName = document.querySelector('.rapperName');
 let alertBox = document.querySelector('.alertBoxes');
+const nextLevel = document.querySelector('.nextLevel')
 let alertGo = document.querySelector('.alertGos');
 let alertMessage = document.querySelector('.alertMessage');
 
-
+nextLevel.hidden = true
 
 let wrongMessages = [
     'SMH...You seriously thought that was the answer?',
@@ -42,6 +43,12 @@ vinceStaples.addEventListener('click', vinceMessage)
 alertGo.onclick = function() {
     alertBox.style.display = "none";
 }
+
+
+nextLevel.onclick = function() {
+    window.location.href= '../challenge4/challenge4.html'
+}
+
 
 //Toggle Player
 let playStopBtn = document.querySelector('.playStopButton');
@@ -83,7 +90,6 @@ function rapGameSlides() {
         rapPics[i].style.display = "none";
     }
 
-
     rapPicIndex++;
     if (rapPicIndex > rapPics.length) {
         rapPicIndex = 1;
@@ -96,7 +102,9 @@ function rapGameSlides() {
         clearTimeout(vinceRight);
         alertBox.style.display = "block";
         alertMessage.innerHTML = "You know about Vince Staple!";
-        alertGo.innerHTML = "Exit";
+        nextLevel.hidden = false
+        alertGo.hidden = true
+        nextLevel.innerHTML = "Next Level";
     }
 }
 window.addEventListener('DOMContentLoaded', rapGameSlides)
