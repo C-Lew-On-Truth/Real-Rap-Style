@@ -1,0 +1,13 @@
+body {
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-family: Comic Sans MS
+}
+
+header {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 60px;
+    color: white
+}
