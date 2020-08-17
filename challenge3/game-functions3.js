@@ -45,7 +45,7 @@ function rapGameSlides() {
         rapPics[rapPicIndex - 1].style.display = "block";
 }
 
-let rapSlides = setInterval(rapGameSlides, 4000);
+let rapSlides = setInterval(rapGameSlides, 3000);
 
 holder.onclick = event => {
 
@@ -72,7 +72,6 @@ alertGo.onclick = event => {
     let target = event.target 
     if (target.classList.contains("alertGos")) {
         slidesMoving = true;
-        setInterval(rapGameSlides, 4000)
         console.log("Alert Box Goes Away")
     }
 }
