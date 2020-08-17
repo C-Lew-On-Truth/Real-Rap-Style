@@ -45,7 +45,7 @@ function rapGameSlides() {
         rapPics[rapPicIndex - 1].style.display = "block";
 }
 
-let rapSlides = setInterval(rapGameSlides, 3000);
+let rapSlides = setInterval(rapGameSlides, 1000);
 
 holder.onclick = event => {
 
