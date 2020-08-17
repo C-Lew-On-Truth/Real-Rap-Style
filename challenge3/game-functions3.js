@@ -77,7 +77,7 @@ alertGo.onclick = event => {
 }
 
     nextLevel.onclick = function () {
-        window.location.href = "../real-rap-fans/challenge4/challenge4.html"
+        window.location.href = "../challenge4/challenge4.html"
     }
     
 
