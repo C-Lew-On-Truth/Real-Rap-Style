@@ -1,19 +1,20 @@
 //Toggle Player
+let playStopBtn = document.querySelector('.playStopButton');
 let userSelect = document.querySelector('.rapSelect');
 let playVince = document.querySelector('#vinceStaples');
 let playButton = document.getElementById('play');
 let stopButton = document.getElementById('stop');
 
-playButton.onclick = function () {
+playButton.onclick = function() {
     playVince.play()
 }
 
-stopButton.onclick = function () {
+stopButton.onclick = function() {
     playVince.pause()
 }
 
-$(document).ready(function () {
-    $('#play, #stop').click(function () {
+$(document).ready(function() {
+    $('#play, #stop').click(function() {
         $('.playStopButton').toggle()
     })
 })
@@ -24,3 +25,4 @@ function musicOver() {
     playButton.style.textAlign = "center";
     console.log('seen');
 }
+
