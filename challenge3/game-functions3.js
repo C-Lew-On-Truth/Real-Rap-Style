@@ -76,15 +76,10 @@ alertGo.onclick = event => {
     }
 }
 
-rightRapper.onclick = () => {
-    alertMessage.innerHTML = "You know about Vince Staples"
-    alertGo.style.display = 'none'
-    nextLevel.hidden = false;
-
     nextLevel.onclick = function () {
         window.location.href = "../challenge4/challenge4.html"
     }
     
-}
+
 
 
