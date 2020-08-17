@@ -1,20 +1,21 @@
+//Main Container
+let holder = document.querySelector(".carousel-holder")
+
 //Wrong Rapper Choice Events
-let earlSweatShirt = document.getElementById('rapper1');
-let tylerTheCreator = document.getElementById('rapper2');
-let childishGambino = document.getElementById('rapper3');
-let vinceStaples = document.getElementById('rightRapper');
-let boogie = document.getElementById('rapper4');
+let wrongRapper = document.querySelector('.choice')
+
+let rightRapper =  document.getElementById('rightRapper')
 
 //Alert Box Data 
-let wrongAnsKey = document.getElementById('ansWrong');
 let rapSelect = document.querySelector('.rapSelect');
-let rapName = document.querySelector('.rapperName');
 let alertBox = document.querySelector('.alertBoxes');
-const nextLevel = document.querySelector('.nextLevel')
 let alertGo = document.querySelector('.alertGos');
 let alertMessage = document.querySelector('.alertMessage');
 
-nextLevel.hidden = true
+
+//User next level data
+const nextLevel = document.querySelector('.nextLevel')
+nextLevel.hidden = true;
 
 let wrongMessages = [
     'SMH...You seriously thought that was the answer?',
@@ -23,88 +24,68 @@ let wrongMessages = [
     'Sorry Buddy....try again...'
 ];
 
-
-let holder = document.querySelector('.carousel-holder')
-
-function holderFunc () {
-    alertBox.style.display = "block";
-    alertMessage.innerHTML = wrongMessages[Math.floor(Math.random() * wrongMessages.length)]
-}
-
-holder.addEventListener('click', holderFunc)
-
-function vinceMessage() {
-    holder.removeEventListener('click', holderFunc)
-}
-
-vinceStaples.addEventListener('click', vinceMessage)
-
-
-alertGo.onclick = function() {
-    alertBox.style.display = "none";
-}
-
-
-nextLevel.onclick = function() {
-    window.location.href= '../challenge4/challenge4.html'
-}
-
-
-//Toggle Player
-let playStopBtn = document.querySelector('.playStopButton');
-let userSelect = document.querySelector('.rapSelect');
-let playVince = document.querySelector('#vinceStaples');
-let playButton = document.getElementById('play');
-let stopButton = document.getElementById('stop');
-
-playButton.onclick = function() {
-    playVince.play()
-}
-
-stopButton.onclick = function() {
-    playVince.pause()
-}
-
-$(document).ready(function() {
-    $('#play, #stop').click(function() {
-        $('.playStopButton').toggle()
-    })
-})
-
-function musicOver() {
-    stopButton.style.display = "none";
-    playButton.style.display = "inline-block";
-    playButton.style.textAlign = "center";
-    console.log('seen');
-}
-
-
 //Infinte Carousel for Challenge 3 Selection
 let rapPicIndex = 0;
+let slidesMoving = true;
 
 function rapGameSlides() {
     let i;
-    let rapPics = document.getElementsByClassName('rapSelect');
+    let rapPics = document.getElementsByClassName("rapSelect");
 
-    for(i = 0; i < rapPics.length; i++) {
-        rapPics[i].style.display = "none";
-    }
+        if (slidesMoving === true) {
+            for (i = 0; i < rapPics.length; i++) {
+                rapPics[i].style.display = "none";
+            }
 
-    rapPicIndex++;
-    if (rapPicIndex > rapPics.length) {
-        rapPicIndex = 1;
-    }
+            rapPicIndex++;
+            if (rapPicIndex > rapPics.length) {
+                rapPicIndex = 1;
+            }
+        }
+        rapPics[rapPicIndex - 1].style.display = "block";
+}
 
-    rapPics[rapPicIndex - 1].style.display = "block";
-    let vinceRight = window.setTimeout(rapGameSlides, 3000);
+let rapSlides = setInterval(rapGameSlides, 4000);
 
-    vinceStaples.onclick = function() {
-        clearTimeout(vinceRight);
+holder.onclick = event => {
+
+    let target = event.target
+
+    if(target.classList.contains("wrongChoice")) {
+        console.log("been seen")
         alertBox.style.display = "block";
-        alertMessage.innerHTML = "You know about Vince Staple!";
-        nextLevel.hidden = false
-        alertGo.hidden = true
-        nextLevel.innerHTML = "Next Level";
+        alertMessage.innerHTML = wrongMessages[Math.floor(Math.random() * wrongMessages.length)]
+        slidesMoving = false;
+    } else if (target.classList.contains("rightChoice")) {
+        alertMessage.innerHTML = "You know about Vince Staples!"
+        alertBox.style.display = "block";
+        alertGo.style.display = "none"
+        slidesMoving = false
+        nextLevel.innerHTML = "Next Level"
+        nextLevel.hidden = false;
     }
 }
-window.addEventListener('DOMContentLoaded', rapGameSlides)
+
+
+alertGo.onclick = event => { 
+    alertBox.style.display = "none";
+    let target = event.target 
+    if (target.classList.contains("alertGos")) {
+        slidesMoving = true;
+        setInterval(rapGameSlides, 4000)
+        console.log("Alert Box Goes Away")
+    }
+}
+
+rightRapper.onclick = () => {
+    alertMessage.innerHTML = "You know about Vince Staples"
+    alertGo.style.display = 'none'
+    nextLevel.hidden = false;
+
+    nextLevel.onclick = function () {
+        window.location.href = "../challenge4/challenge4.html"
+    }
+    
+}
+
+
