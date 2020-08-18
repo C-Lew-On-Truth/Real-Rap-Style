@@ -43,9 +43,10 @@ function rapGameSlides() {
             }
         }
         rapPics[rapPicIndex - 1].style.display = "block";
+        setTimeout(rapGameSlides, 3000);
 }
 
-let rapSlides = setInterval(rapGameSlides, 1000);
+rapGameSlides()
 
 holder.onclick = event => {
 
