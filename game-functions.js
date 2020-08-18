@@ -107,6 +107,6 @@ reStartBtn.addEventListener('click', restartPage);
 
 
 nextLevel.onclick = function() {
-  window.location.href = "Challenge2.html"
+  window.location.href = "challenge2.html"
 };
 
