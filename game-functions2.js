@@ -80,8 +80,6 @@ let rightRapAns = {
             jRock.pause() || drake.pause() || youngGotti.pause() || pushaT.pause() || quik.pause() 
         }
     }
-
-
 };
 
 
