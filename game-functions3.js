@@ -76,7 +76,7 @@ holder.onclick = event => {
 }
 
 nextLevel.onclick = function () {
-    window.location.href = "../challenge4/challenge4.html"
+    window.location.href = "challenge4.html"
 }
 
 
