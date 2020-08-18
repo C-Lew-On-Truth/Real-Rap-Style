@@ -25,7 +25,7 @@ let jRockAns = document.getElementById('jRockDrag');
 let nextPage = document.getElementById('nextPage');
 nextPage.hidden = true;
 nextPage.onclick = function() {
-    window.location.href = "../challenge3/challenge3.html"
+    window.location.href = "challenge3.html"
     //alert('Yes you know some things!')
 }
 

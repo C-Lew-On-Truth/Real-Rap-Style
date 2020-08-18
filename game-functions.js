@@ -106,6 +106,6 @@ fortyBeats.addEventListener('click', rightAnswer);
 reStartBtn.addEventListener('click', restartPage);
 
 nextLevel.onclick = function() {
-  window.location.href = "challenge2.html"
+  window.location.href = "Challenge2.html"
 };
 
