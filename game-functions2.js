@@ -14,40 +14,40 @@ const quikContainer = document.getElementById('quikStartBox');
 
 
 //Drag Rapper Ids
+/*
 let drakeAns = document.getElementById('drakeDrag');
 let pushaAns = document.getElementById('pushaDrag');
 let kuruptAns = document.getElementById('gottiDrag');
 let quikAns = document.getElementById('quikDrag');
 let jRockAns = document.getElementById('jRockDrag');
-
+*/
 
 //Declartion for next challenge button
 let nextPage = document.getElementById('nextPage');
 nextPage.hidden = true;
 nextPage.onclick = function() {
     window.location.href = "challenge3.html"
-    //alert('Yes you know some things!')
 }
 
 const wrongRapDrag = [
-    '<br><br>NO NO NO!', 
-    '<br><br>Seriously Bro...?', 
-    '<br><br>WTF are you smoking!?', 
-    '<br><br>Fake ass Rap Fan', 
-    '<br>You call <br>yourself a <br>contender?'
+    'NO NO NO!', 
+    'Seriously Bro...?', 
+    'WTF are you smoking!?', 
+    'Fake ass Rap Fan', 
+    'You call <br>yourself a <br>contender?'
 ];
 
 
 let rightRapAns = {
     drakeRight: function() {
-        drakeBeats.innerHTML = "<br>Yuuup Thats Drizzy!";
+        drakeBeats.innerHTML = "Yuuup Thats Drizzy!";
         drakeBeats.style.backgroundColor = "white";
         drakeBeats.style.color = "black";
         this.rightMusicPlays()
         
     },
     jRockRight: function() {
-        jRockBeats.innerHTML = "<br>Yuuup!<br>Thats Jay Rock<br>Straight Thugged Out!";
+        jRockBeats.innerHTML = "<span class='jrock'`>Yuuup!<br> Thats Jay RockS!<br>Straight Thugged Out!</span";
         jRockBeats.style.backgroundColor = "white";
         jRockBeats.style.color = "black";
         this.rightMusicPlays()
@@ -55,21 +55,21 @@ let rightRapAns = {
     },
 
     quikRight: function() {
-        quikBeats.innerHTML = "<br>DJ Quik! <br><br>Thats Old Skool!";
+        quikBeats.innerHTML = "DJ Quik! Thats Old Skool!";
         quikBeats.style.backgroundColor = "white";
         quikBeats.style.color = "black";
         this.rightMusicPlays()
     },
 
     pushaRight: function() {
-        pushaBeats.innerHTML = "<br><br>Pusha Push!";
+        pushaBeats.innerHTML = "Pusha Push!";
         pushaBeats.style.backgroundColor = "white";
         pushaBeats.style.color = "black";
         this.rightMusicPlays()
     },
 
     kuruptRight: function() {
-        yGottiBeats.innerHTML = "<br><br>Kurupt Young Gotti!";
+        yGottiBeats.innerHTML = "Kurupt Young Gotti!";
         yGottiBeats.style.backgroundColor = "white";
         yGottiBeats.style.color = "black";
         this.rightMusicPlays()
