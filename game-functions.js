@@ -105,6 +105,7 @@ jayBeats.addEventListener('click', displayWrongJayZ);
 fortyBeats.addEventListener('click', rightAnswer);
 reStartBtn.addEventListener('click', restartPage);
 
+
 nextLevel.onclick = function() {
   window.location.href = "Challenge2.html"
 };
