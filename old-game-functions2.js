@@ -14,179 +14,159 @@ const quikContainer = document.getElementById('quikStartBox');
 
 
 //Drag Rapper Ids
+/*
 let drakeAns = document.getElementById('drakeDrag');
 let pushaAns = document.getElementById('pushaDrag');
 let kuruptAns = document.getElementById('gottiDrag');
 let quikAns = document.getElementById('quikDrag');
 let jRockAns = document.getElementById('jRockDrag');
-
+*/
 
 //Declartion for next challenge button
 let nextPage = document.getElementById('nextPage');
 nextPage.hidden = true;
-nextPage.onclick = function () {
+nextPage.onclick = function() {
     window.location.href = "challenge3.html"
 }
 
 const wrongRapDrag = [
-    'NO NO NO!',
-    'Seriously Bro...?',
-    'WTF are you smoking!?',
-    'Fake ass Rap Fan',
+    'NO NO NO!', 
+    'Seriously Bro...?', 
+    'WTF are you smoking!?', 
+    'Fake ass Rap Fan', 
     'You call <br>yourself a <br>contender?'
 ];
 
 
 let rightRapAns = {
-    drakeRight: function () {
+    drakeRight: function() {
         drakeBeats.innerHTML = "Yuuup Thats Drizzy!";
         drakeBeats.style.backgroundColor = "white";
         drakeBeats.style.color = "black";
         this.rightMusicPlays()
-
+        
     },
-    jRockRight: function () {
+    jRockRight: function() {
         jRockBeats.innerHTML = "<span class='jrock'`>Yuuup!<br> Thats Jay RockS!<br>Straight Thugged Out!</span";
         jRockBeats.style.backgroundColor = "white";
         jRockBeats.style.color = "black";
         this.rightMusicPlays()
-
+        
     },
 
-    quikRight: function () {
+    quikRight: function() {
         quikBeats.innerHTML = "DJ Quik! Thats Old Skool!";
         quikBeats.style.backgroundColor = "white";
         quikBeats.style.color = "black";
         this.rightMusicPlays()
     },
 
-    pushaRight: function () {
+    pushaRight: function() {
         pushaBeats.innerHTML = "Pusha Push!";
         pushaBeats.style.backgroundColor = "white";
         pushaBeats.style.color = "black";
         this.rightMusicPlays()
     },
 
-    kuruptRight: function () {
+    kuruptRight: function() {
         yGottiBeats.innerHTML = "Kurupt Young Gotti!";
         yGottiBeats.style.backgroundColor = "white";
         yGottiBeats.style.color = "black";
         this.rightMusicPlays()
     },
 
-    rightMusicPlays: function () {
-        if (playJayRock || playDrake || playKurupt || playPushaT || playQuik) {
-            jRock.pause() || drake.pause() || youngGotti.pause() || pushaT.pause() || quik.pause()
+    rightMusicPlays: function() {
+        if(playJayRock || playDrake || playKurupt || playPushaT || playQuik) {
+            jRock.pause() || drake.pause() || youngGotti.pause() || pushaT.pause() || quik.pause() 
         }
     }
 };
 
 
 const returnRapDrags = {
-    returnJrock: function () {
+    returnJrock: function() {
         jRockContainer.innerHTML = "<p draggable='true' id='jRockDrag'>Jay Rock</p>";
     },
 
-    returnDrake: function () {
+    returnDrake: function() {
         drakeContainer.innerHTML = "<p draggable='true' id='drakeDrag'> Drake </p>";
     },
 
-    returnPusha: function () {
+    returnPusha: function() {
         pushaContainer.innerHTML = "<p draggable='true' id='pushaDrag'> Pusha T </p>";
     },
 
-    returnQuik: function () {
+    returnQuik: function() {
         quikContainer.innerHTML = "<p draggable='true' id='quikDrag'> Dj Quik </p>";
     },
 
-    returnKurupt: function () {
+    returnKurupt: function() {
         kuruptContainer.innerHTML = "<p draggable='true' id='gottiDrag'> Kurupt </p>";
     }
 
 };
 
-let dragging = false;
+
+
 
 document.ondragstart = function (event) {
     event.dataTransfer.setData('text', event.target.id);
     console.log('dragstart');
-    let target = event.target;
-    target.style.color = 'red'
 };
-
-document.ondrag = function (event) {
-    let target = event.target
-    dragging = true;
-    if (dragging === true) {
-        target.style.display = 'none';
-
-    }
-}
 
 document.ondragover = function (event) {
     event.preventDefault();
     console.log('dragover');
 };
 
-document.ondragend = function (event) {
-    dragging = false;
-    if (dragging === false) {
-        drakeAns.style.display = 'block'
-        pushaAns.style.display = 'block'
-        kuruptAns.style.display = 'block'
-        quikAns.style.display = 'block'
-        jRockAns.style.display = 'block'
-    }
-}
-
 
 const rapperDrop = {
 
-    jRockDrop: function (event) {
+    jRockDrop: function(event) {
         event.preventDefault();
         let jdata = event.dataTransfer.getData('text');
         event.target.appendChild(document.getElementById(jdata));
         console.log('Jay Rock does not play');
         //jRock.pause();
 
-        if (event.target.querySelector('#jRockDrag')) {
-            //jRockBeats.innerHTML = rightRapDrag[3];
-            rightRapAns.jRockRight()
-            rightRapTracker.push('point')
-            jRockBeats.removeEventListener('drop', rapperDrop.jRockDrop);
-            playJayRock()
+       if(event.target.querySelector('#jRockDrag')) {
+       //jRockBeats.innerHTML = rightRapDrag[3];
+       rightRapAns.jRockRight()
+       rightRapTracker.push('point')
+       jRockBeats.removeEventListener('drop', rapperDrop.jRockDrop);
+       playJayRock() 
 
         } else if (event.target.querySelector('#drakeDrag')) {
             jRockBeats.innerHTML = wrongRapDrag[2];
             returnRapDrags.returnJrock();
             returnRapDrags.returnDrake();
-
+           
         } else if (event.target.querySelector('#pushaDrag')) {
-            jRockBeats.innerHTML = wrongRapDrag[2]
+            jRockBeats.innerHTML = wrongRapDrag[2]   
             returnRapDrags.returnJrock();
             returnRapDrags.returnPusha();
-
+         
         } else if (event.target.querySelector('#quikDrag')) {
             jRockBeats.innerHTML = wrongRapDrag[2]
             returnRapDrags.returnJrock();
             returnRapDrags.returnQuik();
-
+            
         } else if (event.target.querySelector('#gottiDrag')) {
             jRockBeats.innerHTML = wrongRapDrag[2]
             returnRapDrags.returnJrock();
             returnRapDrags.returnKurupt();
-
+            
         }
-    },
+       },
 
-    drakeDrop: function (event) {
+    drakeDrop: function(event) {
         event.preventDefault();
         let drakeData = event.dataTransfer.getData('text');
         event.target.appendChild(document.getElementById(drakeData));
         console.log('Drake does not playing');
         //drake.pause();
 
-        if (event.target.querySelector('#drakeDrag')) {
+        if(event.target.querySelector('#drakeDrag')) {
             //drakeBeats.innerHTML = rightRapDrag[0];
             rightRapAns.drakeRight();
             rightRapTracker.push('point')
@@ -197,132 +177,132 @@ const rapperDrop = {
             drakeBeats.innerHTML = wrongRapDrag[3]
             returnRapDrags.returnDrake();
             returnRapDrags.returnJrock();
-
+            
         } else if (event.target.querySelector('#pushaDrag')) {
             drakeBeats.innerHTML = wrongRapDrag[3]
             returnRapDrags.returnDrake();
             returnRapDrags.returnPusha();
-
+           
         } else if (event.target.querySelector('#quikDrag')) {
             drakeBeats.innerHTML = wrongRapDrag[3]
             returnRapDrags.returnDrake();
             returnRapDrags.returnQuik();
-
+         
         } else if (event.target.querySelector('#gottiDrag')) {
             drakeBeats.innerHTML = wrongRapDrag[3]
             returnRapDrags.returnDrake();
             returnRapDrags.returnKurupt();
-
+          
         }
-    },
+       },
 
 
-    pushaDrop: function (event) {
-        event.preventDefault()
-        let pushaTData = event.dataTransfer.getData('text');
-        event.target.appendChild(document.getElementById(pushaTData));
-        console.log('pusha T stops playing')
-        //pushaT.pause()
+       pushaDrop: function(event) {
+        event.preventDefault() 
+         let pushaTData = event.dataTransfer.getData('text');  
+         event.target.appendChild(document.getElementById(pushaTData)); 
+         console.log('pusha T stops playing')
+         //pushaT.pause()
 
-        if (event.target.querySelector('#pushaDrag')) {
-            rightRapAns.pushaRight();
-            rightRapTracker.push('point');
-            pushaBeats.removeEventListener('drop', rapperDrop.pushaDrop);
-            playPushaT()
+         if(event.target.querySelector('#pushaDrag')) {
+             rightRapAns.pushaRight();
+             rightRapTracker.push('point');
+             pushaBeats.removeEventListener('drop', rapperDrop.pushaDrop);
+             playPushaT()
 
-        } else if (event.target.querySelector('#drakeDrag')) {
-            pushaBeats.innerHTML = wrongRapDrag[0];
-            returnRapDrags.returnPusha();
-            returnRapDrags.returnDrake();
-
-        } else if (event.target.querySelector('#jRockDrag')) {
+         } else if (event.target.querySelector('#drakeDrag')) {
+             pushaBeats.innerHTML = wrongRapDrag[0];
+             returnRapDrags.returnPusha();
+             returnRapDrags.returnDrake();
+          
+         } else if (event.target.querySelector('#jRockDrag')) {
             pushaBeats.innerHTML = wrongRapDrag[0];
             returnRapDrags.returnPusha();
             returnRapDrags.returnJrock();
-
-        } else if (event.target.querySelector('#quikDrag')) {
+       
+         } else if (event.target.querySelector('#quikDrag')) {
             pushaBeats.innerHTML = wrongRapDrag[0];
             returnRapDrags.returnPusha();
             returnRapDrags.returnQuik();
-
-        } else if (event.target.querySelector('#gottiDrag')) {
+    
+         } else if (event.target.querySelector('#gottiDrag')) {
             pushaBeats.innerHTML = wrongRapDrag[0];
             returnRapDrags.returnPusha();
             returnRapDrags.returnKurupt();
-
-        }
+       
+         }
     },
 
-    quikDrop: function (event) {
-        event.preventDefault()
-        let pushaTData = event.dataTransfer.getData('text');
-        event.target.appendChild(document.getElementById(pushaTData));
-        console.log('pusha T stops playing');
-        //quik.pause();
+    quikDrop: function(event) {
+        event.preventDefault() 
+         let pushaTData = event.dataTransfer.getData('text');  
+         event.target.appendChild(document.getElementById(pushaTData)); 
+         console.log('pusha T stops playing');
+         //quik.pause();
 
-        if (event.target.querySelector('#quikDrag')) {
+         if(event.target.querySelector('#quikDrag')) {
             rightRapAns.quikRight();
             rightRapTracker.push('Point');
             quikBeats.removeEventListener('drop', rapperDrop.quikDrop);
             quik.play()
 
-        } else if (event.target.querySelector('#jRockDrag')) {
-            quikBeats.innerHTML = wrongRapDrag[1];
+         } else if (event.target.querySelector('#jRockDrag')) {
+            quikBeats.innerHTML =  wrongRapDrag[1];
             returnRapDrags.returnQuik();
             returnRapDrags.returnJrock();
-
-        } else if (event.target.querySelector('#drakeDrag')) {
-            quikBeats.innerHTML = wrongRapDrag[1];
+           
+         } else if (event.target.querySelector('#drakeDrag')) {
+            quikBeats.innerHTML =  wrongRapDrag[1];
             returnRapDrags.returnQuik();
             returnRapDrags.returnDrake();
-
-        } else if (event.target.querySelector('#pushaDrag')) {
-            quikBeats.innerHTML = wrongRapDrag[1];
+          
+         } else if(event.target.querySelector('#pushaDrag')) {
+            quikBeats.innerHTML =  wrongRapDrag[1];
             returnRapDrags.returnQuik();
             returnRapDrags.returnPusha();
-
-        } else if (event.target.querySelector('#gottiDrag')) {
-            quikBeats.innerHTML = wrongRapDrag[1];
+         
+         } else if(event.target.querySelector('#gottiDrag')) {
+            quikBeats.innerHTML =  wrongRapDrag[1];
             returnRapDrags.returnQuik();
             returnRapDrags.returnKurupt();
-
-        }
+         
+         }
     },
 
-    kuruptDrop: function (event) {
-        event.preventDefault();
-        let pushaTData = event.dataTransfer.getData('text');
-        event.target.appendChild(document.getElementById(pushaTData));
-        console.log('pusha T stops playing');
+     kuruptDrop: function(event) {
+        event.preventDefault(); 
+         let pushaTData = event.dataTransfer.getData('text');  
+         event.target.appendChild(document.getElementById(pushaTData)); 
+         console.log('pusha T stops playing');
+        
 
-
-        if (event.target.querySelector('#gottiDrag')) {
+         if(event.target.querySelector('#gottiDrag')) {
             rightRapAns.kuruptRight();
             rightRapTracker.push('Kurupt Young Gotti!');
             yGottiBeats.removeEventListener('drop', rapperDrop.kuruptDrop);
             playKurupt()
-
-        } else if (event.target.querySelector('#jRockDrag')) {
-            yGottiBeats.innerHTML = wrongRapDrag[4];
-            returnRapDrags.returnKurupt();
-            returnRapDrags.returnJrock();
-
-        } else if (event.target.querySelector('#drakeDrag')) {
-            yGottiBeats.innerHTML = wrongRapDrag[4];
-            returnRapDrags.returnKurupt();
-            returnRapDrags.returnDrake();
-
-        } else if (event.target.querySelector('#pushaDrag')) {
+          
+         } else if (event.target.querySelector('#jRockDrag')) {
+             yGottiBeats.innerHTML = wrongRapDrag[4];
+             returnRapDrags.returnKurupt();
+             returnRapDrags.returnJrock();
+         
+         } else if (event.target.querySelector('#drakeDrag')) {
+             yGottiBeats.innerHTML = wrongRapDrag[4];
+             returnRapDrags.returnKurupt();
+             returnRapDrags.returnDrake();
+             
+         } else if (event.target.querySelector('#pushaDrag')) {
             yGottiBeats.innerHTML = wrongRapDrag[4];
             returnRapDrags.returnKurupt();
             returnRapDrags.returnPusha();
-
-        } else if (event.target.querySelector('#quikDrag')) {
-            yGottiBeats.innerHTML = wrongRapDrag[4];
-            returnRapDrags.returnKurupt();
-            returnRapDrags.returnQuik();
-
-        }
+        
+         } else if (event.target.querySelector('#quikDrag')) {
+             yGottiBeats.innerHTML = wrongRapDrag[4];
+             returnRapDrags.returnKurupt();
+             returnRapDrags.returnQuik();
+    
+         }
     }
 };
 
@@ -336,13 +316,9 @@ yGottiBeats.addEventListener('drop', rapperDrop.kuruptDrop);
 //Holder for when user drops all right answers
 const rightRapTracker = [];
 
-window.addEventListener('drop', function () {
+window.addEventListener('drop', function() {
     if (rightRapTracker.length === 5) {
         nextPage.hidden = false;
     }
 
 })
-
-
-
-

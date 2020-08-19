@@ -32,19 +32,25 @@ body {
     align-items: center;
     justify-content: center;
     margin: auto;
-    cursor: pointer;
+
 }
 
 .grid-items {
     border: green 2px solid;
     height: 50px;
     width: 70%;
+    cursor: grab;
 }
 
 .grid-items2 {
     border: white 2px solid;
     height: 100px;
-    width: 300px
+    width: 300px;
+    cursor: pointer;
+}
+
+.grid-items2:hover {
+    background: green;
 }
 
 .jrock {
