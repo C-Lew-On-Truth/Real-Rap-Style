@@ -112,6 +112,7 @@ document.ondragstart = function (event) {
     console.log('dragstart');
     let target = event.target;
     target.style.color = 'red'
+    target.style.fontSize = '50px;'
 };
 
 document.ondrag = function (event) {
