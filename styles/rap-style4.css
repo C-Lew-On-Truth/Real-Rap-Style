@@ -11,3 +11,20 @@ header {
     font-size: 60px;
     color: white
 }
+
+.artist {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: 4% auto;
+}
+
+.spin-wheel {
+    margin: 2% auto;
+    width:400px;
+    height: 400px;
+    border-radius: 100%;    
+    border: white dashed 2px;
+    background: radial-gradient(7em 7em at 35% 35%, red 50%, transparent 50%),
+}
