@@ -1,26 +1,89 @@
+import { westside, asap, action, larry } from './music-with-game4.js'
+
 let spinWheel = document.querySelector('#spinner');
-let artist1 = document.querySelector('.artist-1');
-let artist2 = document.querySelector('.artist-2');
-let artist3 = document.querySelector('.artist-3');
-let artist4 = document.querySelector('.artist-4');
 
-let rap1 = document.querySelector('.rap1');
-let rap2 = document.querySelector('.rap2');
-let rap3 = document.querySelector('.rap3');
-let rap4 = document.querySelector('.rap4');
+const rap1 = document.querySelector('.rap1');
+const rap2 = document.querySelector('.rap2');
+const rap3 = document.querySelector('.rap3');
+const rap4 = document.querySelector('.rap4');
 
-artist1.onclick = function() {
-   rap1.style.backgroundColor = 'red'
+let right = true;
+let answered = false
+
+function westSideRight() {
+
+    console.log('westside is playing');
+
+    function westSpin(event) {
+        let target = event.target.id
+
+        if (target === 'westRap' && right === true || target === 'westRight' && right === true) {
+            rap1.classList.add('right')
+            answered = true
+        }  else if (target !== 'westRap' && answered === false || target !== 'westRight' && answered === false) {
+            target = event.target;
+            target.classList.add('wrong')   
+        }
+    }
+    spinWheel.addEventListener('click', westSpin)
 }
-artist2.onclick = function() {
-   rap2.style.backgroundColor = 'green'
+
+function larryRight() {
+
+    console.log('larry is playing')
+
+    function larrySpin(event) {
+        let target = event.target.id
+        if (target === 'larryRap' && right === true || target === 'larryRight' && right === true) {
+            rap2.classList.add('right')
+            answered = true
+        } else if (target !== 'larryRap' && answered === false || target !== 'larryRight' && answered === false) {
+            target = event.target;
+            target.classList.add('wrong')
+        }
+    }
+    spinWheel.addEventListener('click', larrySpin)
 }
-artist3.onclick = function() {
-   rap3.style.backgroundColor = 'blue'
+/*
+function actionRight() {
+    console.log('action is playing')
+
+    function larrySpin(event) {
+        let target = event.target.id
+        if (target === 'actionRap' && rightAction  === true || target === 'actionRight' && rightAction === true) {
+            rap3.classList.add('right')
+            actionAns = true
+        } else if (target !== 'actionRap' && actionAns  === false || target !== 'actionRight' && actionAns  === false) {
+            target = event.target;
+            target.classList.add('wrong')
+        }
+    }
+    spinWheel.addEventListener('click', larrySpin)
 }
-artist4.onclick = function() {
-   rap4.style.backgroundColor = 'purple'
+
+
+function asapRight() {
+
+    console.log('asap is playing')
+
+    function asapSpin(event) {
+        let target = event.target.id
+        if (target === 'asapRap' && rightAsap === true || target === 'asapRight' && rightAsap === true) {
+            rap4.classList.add('right')
+            asapAns = true
+        } else if (target !== 'asapRap' && asapAns === false || target !== 'asapRight' && asapAns === false) {
+            target = event.target;
+            target.classList.add('wrong')
+        }
+    }
+    spinWheel.addEventListener('click', asapSpin)
 }
+*/
+
+westside.addEventListener('play', westSideRight)
+larry.addEventListener('play', larryRight)
+//action.addEventListener('play', actionRight)
+//asap.addEventListener('play', asapRight)
 
 /*
 spinWheel.onclick = function() {

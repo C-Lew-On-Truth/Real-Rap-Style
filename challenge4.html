@@ -5,11 +5,30 @@
 
 <head>
     <link rel='stylesheet' type='text/css' href='styles/rap-style4.css'>
+    <link rel="icon" href="data:;base64,=">
 </head>
 
-<header>Challenge 4</header>
+<audio id='westside'>
+    <source src='audio/Westside Gunn - Michael Irvin (Audio).mp3'>
+</audio>
+
+<audio id='asap'>
+    <source src='audio/A$AP Rocky - Sundress (Official Video).mp3'>
+</audio>
+
+<audio id='action'>
+    <source src='audio/Action Bronson - Latin Grammys.mp3'>
+</audio>
+
+<audio id='larry'>
+    <source src='audio/Larry June - Financial Freedom.mp3'>
+</audio>
 
 <body>
+
+    <header>Challenge 4</header>
+
+    <div class='stop-music'>STOP MUSIC</div>
 
     <div>
         <section class='artist'>
@@ -20,14 +39,28 @@
         </section>
 
         <div class='spin-wheel' id='spinner'>
-            <div class='rap1' ></div>
-            <div class='rap2' ></div>
-            <div class='rap3' ></div>
-            <div class='rap4' ></div>
+
+            <div class='rap1' id='westRap'>
+                <span  id='westRight'> Westside Gunn </span>
+            </div>
+
+            <div class='rap2' id='larryRap'>
+                <span id='larryRight'>Larry June</span>
+            </div>
+
+            <div class='rap3' id='actionRap'>
+                <span id='actionRight'>Action Bronson</span>
+            </div>
+
+            <div class='rap4' id='asapRap'>
+                <span id='asapRight'>Asap Rocky</span>
+            </div>
+
         </div>
 
     </div>
-    <script src='game-functions4.js'></script>
+    <script type="module" src='game-functions4.js'></script>
+    <script type="module" src='music-with-game4.js'></script>
 </body>
 
 </html>
