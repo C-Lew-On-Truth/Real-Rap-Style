@@ -1,4 +1,4 @@
-import { westside, asap, action, larry } from './music-with-game4.js';
+import { westside, asap, action, larry, artist1, artist2, artist3, artist4 } from './music-with-game4.js';
 
 let spinWheel = document.querySelector('#spinner');
 
@@ -19,6 +19,7 @@ westside.onplay = () => {
         if (target === 'rap1' || target === 'westRap') {
             console.log(target);
             westAns = true;
+            artist1.style.color = 'green';
             rap1.style.backgroundColor = 'green';
             rap1.style.color = 'white';
             rapTracker.push('Westside')
@@ -39,6 +40,7 @@ larry.onplay = () => {
         if (target === 'rap2' || target === 'larryRap') {
             console.log(target);
             larryAns = true;
+            artist4.style.color = 'green';
             rap2.style.backgroundColor = 'green';
             rap2.style.color = 'white';
             rapTracker.push('Larry June')
@@ -59,6 +61,7 @@ asap.onplay = () => {
         if (target === 'rap4' || target === 'asapRap') {
             console.log(target);
             asapAns = true;
+            artist3.style.color = 'green';
             rap4.style.backgroundColor = 'green';
             rap4.style.color = 'white';
             rapTracker.push('Asap Rocky')
@@ -80,6 +83,7 @@ action.onplay = () => {
         if (target === 'rap3' || target === 'actionRap') {
             console.log(target);
             actionAns = true;
+            artist2.style.color = 'green';
             rap3.style.backgroundColor = 'green';
             rap3.style.color = 'white';
             rapTracker.push('Action Bronson')
