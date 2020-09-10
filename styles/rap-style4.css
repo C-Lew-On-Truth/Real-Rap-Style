@@ -172,3 +172,8 @@ header {
     background-color: black;
     color: white;
 }
+
+.normal:hover {
+    background-color: black;
+    color: white;
+}
