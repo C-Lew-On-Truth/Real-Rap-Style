@@ -12,31 +12,22 @@ header {
     color: white;
 }
 
-.stop-music {
-    margin: 2% auto;
-    width: 15%;
-    color: white;
-    border: white dashed 2px;
-    cursor: pointer;
-}
-
-.stop-music:hover {
-    background: red;
-}
-
 .main-container {
     margin: 4% auto;
     display: flex;
+    position: relative;
     flex-direction: row;
-    width: 90%;
+    width: 85%;
     justify-content: space-evenly;
+    border: red dashed 1px;
 }
 
+/* Left Section */
 .artist {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 30%;
+    width: 25%;
     justify-content: space-evenly;
     margin: 1% auto;
     color: white;
@@ -52,14 +43,89 @@ header {
         font-size: 25px; 
         color: green;
      }
+/* Middle Section */
+     .middle-container {
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         align-items: center;
+         margin: 15% auto;
+         width: 30%;
+         color: white;
+     }
 
+     .middle-container p {
+         font-size: 18px;
+     }
 
+     .stop-music {
+        display: flex;  
+        width: 75%;
+        height: 60px;
+        border: white dashed 2px;
+        cursor: pointer;
+        border-radius: 50%;
+        font-size: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .stop-music:hover {
+        background: red;
+    }
 
+    .go-instructions {
+        font-size: 20px;
+        color: blue;
+        cursor: pointer;
+    }
+
+    .go-instructions:hover {
+       color: green;
+    }
+
+    .instructions-alert {
+        position: absolute;
+        width: 60%;
+        border: white dashed 2px;
+        background: black;
+        height: 350px;
+        top: 50%;
+        z-index: 1;
+        transform: translateY(-50%)
+    }
+    .instructions-alert h1 {
+        font-size: 28px;
+    }
+
+    .instructions-alert p {
+        font-size: 20px;
+        padding: 2%;
+        margin: 2%;
+    }
+    .instructions-alert h4 {
+        position: absolute;
+        font-size: 20px;
+        bottom: 0%;
+        left: 50%;
+        transform: translateX(-50%)
+    }
+
+    .exit-instructions {
+       color: blue;
+       cursor: pointer;
+    }
+
+    .exit-instructions:hover {
+        color: green;
+     }
+    
+/* Right Section....Spin Circle CSS Code.... */
 .spin-wheel {
     display: flex;
     position: relative;
     border: white solid 5px;
-    margin: 2% auto;
+    margin: 4% auto;
     width: 400px;
     height: 400px;
     border-radius: 100%;
@@ -78,6 +144,17 @@ header {
 
 .stop-spin {
     border: white solid 5px;
+    margin: 4% auto;
+    width: 400px;
+    height: 400px;
+    border-radius: 100%;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.wrong-spin {
+    border: white solid 5px;
     margin: 2% auto;
     width: 400px;
     height: 400px;
@@ -85,6 +162,7 @@ header {
     position: relative;
     display: flex;
     overflow: hidden;
+    background: red;
 }
 
 .rap1, .rap2, .rap3, .rap4 {
@@ -168,6 +246,12 @@ header {
     font-size: 20px;
     margin: 50% auto;
     transform: rotate(-40deg)
+}
+
+/* Wrong answers */
+.wrong {
+    color: red;
+    font-size: 25px;
 }
 
 @media screen and (max-width: 980px) {
