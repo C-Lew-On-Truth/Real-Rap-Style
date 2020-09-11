@@ -19,7 +19,7 @@ header {
     flex-direction: row;
     width: 85%;
     justify-content: space-evenly;
-    border: red dashed 1px;
+   /* border: red dashed 1px; */
 }
 
 /* Left Section */
@@ -63,6 +63,10 @@ header {
         width: 75%;
         height: 60px;
         border: white dashed 2px;
+        background: black;
+        color: white;
+        font-family: Comic Sans MS;
+        padding: 2%;
         cursor: pointer;
         border-radius: 50%;
         font-size: 20px;
@@ -151,18 +155,6 @@ header {
     position: relative;
     display: flex;
     overflow: hidden;
-}
-
-.wrong-spin {
-    border: white solid 5px;
-    margin: 2% auto;
-    width: 400px;
-    height: 400px;
-    border-radius: 100%;
-    position: relative;
-    display: flex;
-    overflow: hidden;
-    background: red;
 }
 
 .rap1, .rap2, .rap3, .rap4 {
@@ -254,12 +246,55 @@ header {
     font-size: 25px;
 }
 
-@media screen and (max-width: 980px) {
-    .stop-music {
-        width: 30%;
-    }
+@media screen and (max-width: 1250px) {
     .main-container {
         flex-direction: column;
         width: 100%;
+        margin: 5% auto;
+        justify-content: center;
+        height: auto;
+    }
+    .artist {
+        width: 60%;
+    }
+
+    .middle-container {
+        width: 100%;
+    }
+
+    .instructions-alert {
+        width: 60%;
+    }
+    .stop-music {
+        width: 30%;
+    }
+
+    .spin-wheel {   
+        width: 450px;
+        height: 450px;
+    }
+    
+    .stop-spin {
+        width: 450px;
+        height: 450px;
+    }
+   
+}
+
+@media screen and (max-width: 1090px) {
+    .stop-music {
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .spin-wheel {   
+        width: 375px;
+        height: 375px;
+    }
+    
+    .stop-spin {
+        width: 375px;
+        height: 375px;
     }
 }
