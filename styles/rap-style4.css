@@ -93,6 +93,7 @@ header {
         width: 60%;
         border: white dashed 2px;
         background: black;
+        color: white;
         height: 350px;
         top: 50%;
         z-index: 1;
@@ -102,10 +103,11 @@ header {
         font-size: 28px;
     }
 
-    .instructions-alert p {
-        font-size: 20px;
-        padding: 2%;
-        margin: 2%;
+    .instructions-alert li {
+        font-size: 17px;
+        width: 90%;
+        margin: 2% auto;
+        color: white;
     }
     .instructions-alert h4 {
         position: absolute;
