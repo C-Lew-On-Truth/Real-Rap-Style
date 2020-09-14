@@ -1,0 +1,12 @@
+body {
+    background: black;
+    text-align: center;
+    font-family: Comic Sans MS;
+    user-select: none;
+}
+
+header {
+    color: white;
+    font-size: 60px;
+    font-weight: bold;
+}

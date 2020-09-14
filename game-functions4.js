@@ -160,25 +160,36 @@ window.onclick = function () {
         document.querySelector('#spinner').classList.add('stop-spin');
         console.log('you named all the rappers')
         console.log(rapTracker)
+        newPage.style.display = "block"
     }
 };
+
+const newPage = document.querySelector('.new-page');
+newPage.style.display = "none";
 
 //Instructions 
 const instructions = document.querySelector('.go-instructions');
 let instructPopUp = document.querySelector('.instructions-alert')
 const exitInstructPop = document.querySelector('.exit-instructions')
-instructPopUp.hidden = true;
+instructPopUp.style.display = "none";
+
 
 
 instructions.onclick = () => {
-    instructPopUp.hidden = false
+    instructPopUp.style.display = "block";
     document.querySelector('#spinner').classList.remove('spin-wheel');
     document.querySelector('#spinner').classList.add('stop-spin');
 }
 
 
 exitInstructPop.onclick = () => {
-    instructPopUp.hidden = true;
+    instructPopUp.style.display = "none";
     document.querySelector('#spinner').classList.add('spin-wheel');
     document.querySelector('#spinner').classList.remove('stop-spin');
+}
+
+
+
+newPage.onclick = () => {
+    window.location.href = '/challenge5.html'
 }

@@ -19,10 +19,11 @@ header {
     flex-direction: row;
     width: 85%;
     justify-content: space-evenly;
-   /* border: red dashed 1px; */
+    /* border: red dashed 1px; */
 }
 
 /* Left Section */
+
 .artist {
     display: flex;
     flex-direction: column;
@@ -35,98 +36,130 @@ header {
     border: green 10px ridge;
 }
 
-    .artist-1, .artist-2, .artist-3, .artist-4 {
-       font-size: 25px; 
-    }
+.artist-1, .artist-2, .artist-3, .artist-4 {
+    font-size: 25px;
+}
 
-    .artist-1:hover, .artist-2:hover, .artist-3:hover, .artist-4:hover {
-        font-size: 25px; 
-        color: green;
-     }
+.artist-1:hover, .artist-2:hover, .artist-3:hover, .artist-4:hover {
+    font-size: 25px;
+    color: green;
+}
+
 /* Middle Section */
-     .middle-container {
-         display: flex;
-         flex-direction: column;
-         justify-content: space-between;
-         align-items: center;
-         margin: 15% auto;
-         width: 30%;
-         color: white;
-     }
 
-     .middle-container p {
-         font-size: 18px;
-     }
+.middle-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15% auto;
+    width: 30%;
+    color: white;
+}
 
-     .stop-music {
-        display: flex;  
-        width: 75%;
-        height: 60px;
-        border: white dashed 2px;
-        background: black;
-        color: white;
-        font-family: Comic Sans MS;
-        padding: 2%;
-        cursor: pointer;
-        border-radius: 50%;
-        font-size: 20px;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .stop-music:hover {
-        background: red;
-    }
+.middle-container p {
+    font-size: 18px;
+}
 
-    .go-instructions {
-        font-size: 20px;
-        color: blue;
-        cursor: pointer;
-    }
+.stop-music {
+    display: flex;
+    width: 75%;
+    height: 60px;
+    border: white dashed 2px;
+    background: black;
+    color: white;
+    font-family: Comic Sans MS;
+    padding: 2%;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+}
 
-    .go-instructions:hover {
-       color: green;
-    }
+.stop-music:hover {
+    background: red;
+}
 
-    .instructions-alert {
-        position: absolute;
-        width: 60%;
-        border: white dashed 2px;
-        background: black;
-        color: white;
-        height: 350px;
-        top: 50%;
-        z-index: 1;
-        transform: translateY(-50%)
-    }
-    .instructions-alert h1 {
-        font-size: 28px;
-    }
+.go-instructions {
+    font-size: 20px;
+    color: blue;
+    cursor: pointer;
+}
 
-    .instructions-alert li {
-        font-size: 17px;
-        width: 90%;
-        margin: 2% auto;
-        color: white;
-    }
-    .instructions-alert h4 {
-        position: absolute;
-        font-size: 20px;
-        bottom: 0%;
-        left: 50%;
-        transform: translateX(-50%)
-    }
+.go-instructions:hover {
+    color: green;
+}
 
-    .exit-instructions {
-       color: blue;
-       cursor: pointer;
-    }
+.instructions-alert {
+    position: absolute;
+    width: 60%;
+    border: white dashed 2px;
+    background: black;
+    color: white;
+    height: auto;
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%)
+}
 
-    .exit-instructions:hover {
-        color: green;
-     }
-    
+.instructions-alert h1 {
+    font-size: 28px;
+    margin: 1% auto;
+}
+
+.instructions-alert li {
+    font-size: 17px;
+    width: 90%;
+    margin: 2% auto;
+    color: white;
+}
+
+.instructions-alert h4 {
+    /*position: absolute;
+    font-size: 20px;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    */
+    margin-top: 5%;
+      font-size: 20px;
+}
+
+.exit-instructions {
+    margin: auto;
+    color: blue;
+    cursor: pointer;
+}
+
+.exit-instructions:hover {
+    color: green;
+}
+
+.new-page {
+    display: flex;
+   
+    border: white 2px dashed;
+    background: black;
+    color: white;
+    width: 50%;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.new-page:hover {
+    background: green;
+}
+
+.new-page span {
+    margin: 2% auto;
+}
+
 /* Right Section....Spin Circle CSS Code.... */
+
 .spin-wheel {
     display: flex;
     position: relative;
@@ -139,13 +172,13 @@ header {
     animation: spinCircle 20s infinite linear;
 }
 
-
 @keyframes spinCircle {
-   from {
-       transform: rotate(0deg)
-   } to {
-       transform: rotate(360deg)
-   }
+    from {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(360deg)
+    }
 }
 
 .stop-spin {
@@ -161,7 +194,7 @@ header {
 
 .rap1, .rap2, .rap3, .rap4 {
     display: flex;
-    border: white 2px inset;
+    border: white 2px solid;
     align-items: center;
     width: 50%;
     height: 50%;
@@ -205,8 +238,7 @@ header {
     left: 50%;
 }
 
-
-.rap1 span{
+.rap1 span {
     position: absolute;
     right: 5%;
     bottom: 10%;
@@ -243,6 +275,7 @@ header {
 }
 
 /* Wrong answers */
+
 .wrong {
     color: red;
     font-size: 25px;
@@ -256,47 +289,51 @@ header {
         justify-content: center;
         height: auto;
     }
+
+    .new-page {
+        width: 30%;
+    }
+
     .artist {
         width: 60%;
     }
-
     .middle-container {
         width: 100%;
     }
-
     .instructions-alert {
-        width: 60%;
+        width: 70%;
     }
     .stop-music {
         width: 30%;
     }
-
-    .spin-wheel {   
+    .spin-wheel {
         width: 450px;
         height: 450px;
     }
-    
     .stop-spin {
         width: 450px;
         height: 450px;
     }
-   
 }
 
 @media screen and (max-width: 1090px) {
+    .instructions-alert {
+    
+    }
     .stop-music {
         width: auto;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .spin-wheel {   
+    .spin-wheel {
         width: 375px;
         height: 375px;
+        margin: 0% auto;
     }
-    
     .stop-spin {
         width: 375px;
         height: 375px;
+        margin: 0% auto;
     }
 }
