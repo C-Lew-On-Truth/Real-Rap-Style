@@ -2,40 +2,51 @@
     box-sizing: border-box;
 }
 
-
 body {
     background-color: black;
     color: white;
     text-align: center;
+    font-family: Comic Sans MS
 }
 
 header {
-    padding-top: 20px;
     text-align: center;
-    font-size: 40px;
+    font-size: 60px;
+}
+
+#noMoreQuestion {
+    color: blue;
+}
+
+#rightAns1 {
+    color: green;
+}
+
+.rap-bars {
+    width: 60%;
+    margin: 0 auto;
+    font-size: 25px;
 }
 
 img {
-
     width: 100%;
     height: 100%;
-
 }
 
-.grid-container {
-   
-    display: grid;
-    margin-top: 2% ;
+.container {
+    /*display: grid;*/
+    display: flex;
+    margin: 0 auto;
+    width: 95%;
     justify-content: space-evenly;
-    grid-template-columns: 20%  20%   20%   20%  20% ;
-    justify-items: center;
-
+    align-items: center;
+    /*grid-template-columns: 20%  20%   20%   20%  20% ; */
 }
 
 .container-items {
     border: dashed gray 6px;
-    width: 200px;
-    height:300px;
+    height: 250px;
+    width: 18%;
     cursor: pointer;
     font-size: 30px;
     text-align: center;
@@ -55,14 +66,20 @@ img {
     cursor: pointer;
 }
 
-.rap-bars {
-    display: grid;
-    margin-bottom: 10px;
-    height: 30px;
+.wrong {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: black;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
 }
 
 #restart {
-    margin-top: 90px;
+    margin: 1% auto;
     border: dashed black 2px;
     border-radius: 50%;
     font-family: sans-serif;
@@ -72,8 +89,6 @@ img {
     width: 100px;
     height: 50px;
     cursor: pointer;
-    margin-left:auto;
-    margin-right: auto;
 }
 
 #next-challenge {
@@ -86,34 +101,51 @@ img {
     color: red;
     width: 100px;
     height: 50px;
-    margin-left:auto;
+    margin-left: auto;
     margin-right: auto;
     cursor: pointer;
 }
 
 @media screen and (max-width: 950px) {
-
     .rap-bars {
         font-size: 20px;
     }
-    .grid-container {
-        display: grid;
-        grid-template-columns: 100%;
-        margin-top: 5%;
+    .container {
+        margin: 4% auto;
+        flex-direction: column;
         width: 100%;
-        grid-gap:40px;
-    } 
-
+    }
     .container-items {
         width: 60%;
+        height: 300px;
+        margin: 2% auto;
     }
-
     #next-challenge {
         margin-top: 5%;
     }
-
     #restart {
         margin-top: 20%;
-      
+    }
+}
+
+@media screen and (max-height: 660px) {
+    header {
+        font-size: 40px;
+    }
+    #noMoreQuestion {
+        font-size: 25px;
+    }
+    #rightAns1 {
+        font-size: 25px;
+    }
+
+    .rap-bars {
+   
+   
+        font-size: 20px;
+    }
+
+    .container-items {
+        height: 200px;
     }
 }

@@ -337,3 +337,21 @@ header {
         margin: 0% auto;
     }
 }
+
+@media screen and (max-height: 640px) {
+
+    header {
+        font-size: 50px;
+    }
+    .main-container {
+        margin: 0 auto;
+    }
+    .spin-wheel  {
+        margin: auto
+    }
+
+    .stop-spin {
+        margin: auto;
+    }
+
+}

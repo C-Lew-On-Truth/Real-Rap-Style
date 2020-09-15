@@ -13,7 +13,7 @@
     let kuruptBeats = document.getElementById('kurupt-plays');
     let outkastBeats = document.getElementById('outkast-plays');
     let jayBeats = document.getElementById('jayz-plays');
-    let stopMusic = document.getElementById('stop');
+    let stopMusic = document.querySelector('.stop-music');
 
     function pacBegins() {
       pacMusic.play();
@@ -58,7 +58,7 @@
     kuruptBeats.addEventListener('click', playKurupt);
     outkastBeats.addEventListener('click', playOutkast);
     jayBeats.addEventListener('click', playJayZ);
-    stopMusic.addEventListener('click', musicStop);
+    //stopMusic.addEventListener('click', musicStop);
 
 
 export { pacMusic, pacBeats, pacBegins };

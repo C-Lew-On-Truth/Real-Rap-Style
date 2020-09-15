@@ -33,44 +33,29 @@ let fortyRight = document.getElementById('imageRight');
 function displayWrongPac() {
   pacWrong.replaceChild(wrongPac, pacBeats);
   pacWrong.style.border = "red dashed 6px";
-  wrongPac.innerHTML = "<br><br><br>Your<br> WRONG!";
-  wrongPac.style.backgroundColor = "black";
-  wrongPac.style.height = "100%";
-  wrongPac.style.width = "100%";
-  console.log('This worked');
+  wrongPac.innerHTML = "Your WRONG!";
+  wrongPac.classList.add("wrong")
 }
 
 function displayWrongKurupt() {
   kuruptWrong.replaceChild(wrongKurupt, kuruptBeats);
   kuruptWrong.style.border = "red dashed 6px";
-  wrongKurupt.innerHTML = "<br><br><br>Nah <br> Doggy";
-  wrongKurupt.style.backgroundColor = "black";
-  wrongKurupt.style.color = "white";
-  wrongKurupt.style.height = "100%";
-  wrongKurupt.style.width = "100%";
-  console.log('Kurupt is Wrong');
+  wrongKurupt.innerHTML = "<span class='wrong-message'>Nah Doggy</span>";
+  wrongKurupt.classList.add("wrong")
 }
 
 function displayWrongOutkast() {
   outkastWrong.replaceChild(wrongOutkast, outkastBeats);
   outkastWrong.style.border = "red dashed 6px";
-  wrongOutkast.innerHTML = "<br><br><br>Try Again<br> Friend";
-  wrongOutkast.style.backgroundColor = "black";
-  wrongOutkast.style.color = "white";
-  wrongOutkast.style.height = "100%";
-  wrongOutkast.style.width = "100%";
-  console.log("OutKast Wrong");
-
+  wrongOutkast.innerHTML = "Try Again Friend";
+  wrongOutkast.classList.add("wrong")
 }
 
 function displayWrongJayZ() {
   jayWrong.replaceChild(wrongJay, jayBeats);
   jayWrong.style.border = "red dashed 6px";
-  wrongJay.innerHTML = "<br><br><br>You don't <br>know<br> anything...";
-  wrongJay.style.backgroundColor = "black";
-  wrongJay.style.color = "white";
-  wrongJay.style.height = "100%";
-  wrongJay.style.width = "100%";
+  wrongJay.innerHTML = "You don't know anything...";
+  wrongJay.classList.add("wrong")
   console.log('Jay Z is Wrong');
 }
 

@@ -32,6 +32,7 @@ body {
 }
 
 .carousel-holder {
+    position: relative;
     margin:   auto;
     margin-top: 30px;
     width: 40%;
@@ -58,11 +59,11 @@ img {
     flex-direction: column;
     align-items: center;
     top: 32%;
-    left: 32%;
+    right: 32%;
     background-color: black;
     display: none; 
     width: 35%;
-    height: 40%;
+    height: 50%;
     border: dashed 10px white;
 }
 
@@ -70,7 +71,7 @@ img {
     margin: 15% auto;
     font-size: 30px;
     text-align: center;
-    padding: 2%px;
+    padding: 3%;
 }
 
 .alertGos, .nextLevel {
@@ -86,4 +87,11 @@ img {
     font-family: Comic Sans MS;
     margin-bottom: 10px;    
     cursor: pointer;                  
+}
+
+@media screen and (max-height: 660px) {
+    .carousel-holder {
+        height: 40%;
+        width: 35%;
+    }
 }
