@@ -10,3 +10,21 @@ header {
     font-size: 60px;
     font-weight: bold;
 }
+
+.game-container {
+    display: flex;
+    margin: 2% auto;
+    width: 95%;
+    color: white;
+    /*border: 3px dashed white;*/
+    justify-content: center;
+}
+
+.timer {
+    color: green;
+}
+
+.game-container span {
+    text-align: center;
+    font-size: 30px;
+}
