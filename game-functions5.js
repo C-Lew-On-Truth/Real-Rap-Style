@@ -1,44 +1,91 @@
-
-let game = document.querySelector('.game-container')
-let musicPlaying = false
+let audio = document.getElementById('audio');
+let message = document.querySelector('.message');
+let countDown= false;
+let answersSelected = false;
+let rightSelect = false
+//let correct = true;
 
 let realTime = document.querySelector('.timer');
 let pause = document.querySelector('.pause');
-let start = document.querySelector('.start')
-let time = 60;
+pause.hidden = true;
+let start = document.querySelector('.start');
+let time = 10;
+let rappers = document.querySelector('.choices')
 
 function timer() {
-    
-
     let counter = setInterval(() => {
-        if (musicPlaying === false) {
+        if (countDown === true && answersSelected === false) {
             realTime.innerHTML = time;
             time--
-            if( time <= -1) {
+            if (time <= -1) {
                 clearInterval(counter)
-                alert('you fucked up')
-            } 
-        }
-    }, 1000)
-  
-}
-
-//timer()
-pause.onclick = function() {
-    musicPlaying = false;
-    audio.pause()
-}
-
-start.onclick = function() {
-    musicPlaying = true;
-    audio.play()
-}
-
-let audio = document.getElementById('audio');
-
-audio.onplay = () => {
-    
-}
+                message.innerHTML = 'YOU FUCKED UP'
+            };
+        };
+    }, 1000);
+};
 
 timer()
+
+pause.onclick = function () {
+    audio.pause();
+}
+
+start.onclick = function () {
+    audio.play();
+
+}
+
+audio.onplay = () => {
+    pause.hidden = false;
+    start.hidden = true;
+}
+
+audio.onpause = () => {
+    pause.hidden = true;
+    start.hidden = false;
+}
+
+audio.onended = () => {
+    if (rightSelect === true && answersSelected === true) {
+        countDown= false;
+    } else  {
+        countDown = true;
+    } 
+    pause.hidden = true;
+    start.hidden = false;
+}
+
+
+rappers.onclick = event => {
+    countDown = true;
+    let target = event.target.className
+    if (rightSelect === false) {
+        switch (target) {
+            case 'choice_1':
+                document.querySelector('.choice_1').classList.add('wrong-choice')
+                document.querySelector('.choice_1').innerHTML = "NOT EVEN CLOSE";
+                break
+            case 'choice_2':
+                document.querySelector('.choice_2').classList.add('right')
+                document.querySelector('.choice_2').innerHTML = "YOU KNOW WHATS GOOD!"
+                countDown = false;
+                rightSelect = true;
+                answersSelected = true;
+                break
+            case 'choice_3':
+                document.querySelector('.choice_3').classList.add('wrong-choice')
+                document.querySelector('.choice_3').innerHTML = "THATS NOT EVEN HIS STYLE"
+                break
+            case 'choice_4':
+                document.querySelector('.choice_4').classList.add('wrong-choice');
+                break
+            case 'choice_5':
+                document.querySelector('.choice_5').classList.add('wrong-choice')
+                document.querySelector('.choice_5').innerHTML = "YOU HIGH BRO...."
+                break
+        }
+    }
+
+}
 

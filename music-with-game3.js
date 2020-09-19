@@ -23,6 +23,5 @@ function musicOver() {
     stopButton.style.display = "none";
     playButton.style.display = "inline-block";
     playButton.style.textAlign = "center";
-    console.log('seen');
 }
 

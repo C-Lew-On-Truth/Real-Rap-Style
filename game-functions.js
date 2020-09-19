@@ -9,7 +9,7 @@ import { stopMusic } from './music-with-game.js';
 //Variables for game
 let reStartBtn = document.getElementById('restart');
 let nextLevel = document.getElementById('next-challenge');
-let questionsGone = document.getElementById('noMoreQuestion');
+let directions = document.getElementById('directions');
 let rightAnsMessage = document.getElementById('rightAns1');
 
 let wrongPac = document.createElement('div');
@@ -67,9 +67,9 @@ function restartPage() {
 function rightAnswer() {
   if (fortyBeats) {
     nextLevel.hidden = false;
-    questionsGone.hidden = true;
+    directions.hidden = true;
     rightAnsMessage.hidden = false;
-    fortyRight.style.border = "white 6px dashed";
+    fortyRight.style.border = "white 5px dashed";
     pacBeats.removeEventListener('click', displayWrongPac);
     pacBeats.removeEventListener('click', pacBegins);
     kuruptBeats.removeEventListener('click', displayWrongKurupt);

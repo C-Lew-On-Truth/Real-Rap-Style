@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="data:;base64,=">
-    <link rel="stylesheet" type="text/css" href= "styles/rap-style.css">
-   
+    <link rel="stylesheet" type="text/css" href="styles/rap-style.css">
+
 </head>
 <title>
     Are You a Real Rap Fan?
@@ -33,49 +34,52 @@
 <body>
     <header>Challenge 1</header>
 
-    <h1 id="noMoreQuestion">Click the picture of the rapper who said these lyrics below!</h1>
-    <h1 id="rightAns1">Nice Pick! E-40 said those lyrics!</h1>
+    <div class='gameHolder'>
 
-    <p class="rap-bars">
-        Trapper factor macker having money like a rapper
-        Bumping local talent pulling up with the blabber
-        Patna wanna challenge 'cause my pockets hella fatter
-        But he gone be unlucky like walking under a ladder
-        Put hands on a man, fuck unity
-        Ain't nothing between us, but space and opportunity
-    </p>
+        <h1 id="directions">Click the picture of the rapper who said these lyrics below!</h1>
+        <h1 id="rightAns1">Nice Pick! E-40 said those lyrics!</h1>
 
-    <button id="restart">Restart</button>
+        <p class="rap-bars">
+            Trapper factor macker having money like a rapper/
+            Bumping local talent pulling up with the blabber/
+            Patna wanna challenge cause my pockets hella fatter/
+            But he gone be unlucky like walking under a ladder/
+            Put hands on a man fuck unity/
+            Ain't nothing between us, but space and opportunity/
+        </p>
 
-    <div class="container">
+        <div id="restart">Restart</div>
 
-        <div class="container-items" id="imageSwitch1">
-            <img id="tupac-plays" src="images/Tupac.jpg" />
+        <div class="container">
+
+            <div class="container-items" id="imageSwitch1">
+                <img id="tupac-plays" src="images/Tupac.jpg" />
+            </div>
+
+            <div class="container-items" id="imageRight">
+                <img id="e-40-plays" src="images/E-40.jpg">
+            </div>
+
+            <div class="container-items" id="imageSwitch2">
+                <img id="kurupt-plays" src="images/Kurupt.jpg">
+            </div>
+
+            <div class="container-items" id="imageSwitch3">
+                <img id="outkast-plays" src="images/Outkast.jpg">
+            </div>
+
+            <div class="container-items" id="imageSwitch4">
+                <img id="jayz-plays" src="images/JayZ.jpg">
+            </div>
+
         </div>
 
-        <div class="container-items" id="imageRight">
-            <img id="e-40-plays" src="images/E-40.jpg">
-        </div>
+     
 
-        <div class="container-items" id="imageSwitch2">
-            <img id="kurupt-plays" src="images/Kurupt.jpg">
-        </div>
+            <button class="stop-music">Stop Music</button>
+            <button id="next-challenge">Next Challenge</button>
 
-        <div class="container-items" id="imageSwitch3">
-            <img id="outkast-plays" src="images/Outkast.jpg">
-        </div>
-
-        <div class="container-items" id="imageSwitch4">
-            <img id="jayz-plays" src="images/JayZ.jpg">
-        </div>
-
-    </div>
-
-    <div>
-
-        <button class="stop-music">Stop Music</button>
-        <button id="next-challenge">Next Challenge</button>
-
+       
     </div>
 
 

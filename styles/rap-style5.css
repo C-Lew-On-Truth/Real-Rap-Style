@@ -13,18 +13,101 @@ header {
 
 .game-container {
     display: flex;
-    margin: 2% auto;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
     width: 95%;
     color: white;
     /*border: 3px dashed white;*/
     justify-content: center;
 }
 
+.top-intro {
+    margin: 1% auto;
+    width: 75%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    border: 3px dashed white;
+}
+
+.top-intro h1 {
+    cursor: pointer;
+}
+
+.start, .pause {
+    margin: 2% auto;
+    background: black;
+    color: white;
+    padding: 2%;
+    font-size: 25px;
+    width: 150px;
+    border: white dashed 2px;
+    font-family: Comic Sans Ms;
+    align-items: center;
+    cursor: pointer;
+}
+
+.start:hover {
+    background: green;
+    color: black;
+}
+
+.pause:hover {
+    background: red;
+    color: black;
+}
+
 .timer {
+    margin: 0 auto;
+    color: green;
+    font-size: 20px;
+}
+
+.message {
+    color: white;
+    font-size: 20px;
+}
+
+.choices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2% auto;
+    border: white dashed 1px;
+    width: 65%;
+    height: 100% auto;
+}
+
+.choice_1, 
+.choice_2, 
+.choice_3, 
+.choice_4, 
+.choice_5 {
+    color: white;
+    margin: 1% auto;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.choice_1:hover, 
+.choice_2:hover, 
+.choice_3:hover, 
+.choice_4:hover, 
+.choice_5:hover {
     color: green;
 }
 
-.game-container span {
-    text-align: center;
-    font-size: 30px;
+.wrong-choice {
+    color: red;
 }
+
+.wrong-choice:hover {
+    color: red;
+}
+
+.right {
+    color: green;
+}
+
