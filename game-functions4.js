@@ -191,5 +191,5 @@ exitInstructPop.onclick = () => {
 
 
 newPage.onclick = () => {
-    window.location.href = '/challenge5.html'
+    window.location.href = 'challenge5.html'
 }
