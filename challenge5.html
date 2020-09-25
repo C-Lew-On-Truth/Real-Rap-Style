@@ -1,45 +1,65 @@
 <!DOCTYPE>
 <html>
-    <head>
-        <link rel='stylesheet' type='text/css' href='styles/rap-style5.css'>
-        <link rel="icon" href="data:;base64,=">
-    </head>
-    
-    <title>
-        Final Challenge
-    </title>
 
-    <audio id='audio'>
-        <source src='audio/Theophilus London - Flying Overseas feat. Solange Knowles.mp3'/>
-    </audio>
+<head>
+    <link rel='stylesheet' type='text/css' href='styles/rap-style5.css'>
+    <link rel="icon" href="data:;base64,=">
+</head>
 
-    <body>
-        <header onclick="alert(window.innerHeight)">FINAL CHALLENGE</header>
+<title>
+    Final Challenge
+</title>
 
-        <div class='game-container'>
-        
-               
-            <div class='top-intro'>
-                
-                
-                <h2 class='start'>Start</h2>
-                <h2 class='pause'>Pause</h2>  
-                <p class='timer'></p>
+<audio id='audio'>
+    <source src='audio/Theophilus London - Flying Overseas feat. Solange Knowles.mp3' />
+</audio>
 
-                <p class='message'></p>
-             
-            </div>
+<body>
+    <header onclick="alert(window.innerHeight)">FINAL CHALLENGE</header>
 
-            <div class='choices'>
-                <div class="choice_1">21 Savage </div>
-                <div class="choice_2"> Theophilus London</div>
-                <div class="choice_3">Big Baby DRAM</div>
-                <div class="choice_4">Tyga</div>
-                <div class="choice_5">Freddie Gibbs</div>
-            </div>
+    <div class='game-container'>
 
+        <div class='left-giphy'>
+            <img src='images/mario.gif' />
         </div>
 
-        <script src='game-functions5.js'></script>
-    </body>
+
+        <div class='middle'>
+            <div class='top-intro'>
+
+
+                <h2 class='start'>Start</h2>
+                <h2 class='pause'>Pause</h2>
+                <p class='timer'>RULES</p>
+
+                <ul class='instructs'>
+                    <li> Press play to listen to the song,
+                        then choose which rapper you think is behind the track!</li>
+                    <li><span style='color: red'>CAUTION!</span> 
+                        Once you begin your selection or when the song is complete the timer will begin!</li>
+                </ul>
+                <span>GOOD LUCK!</span>
+            </div>
+
+            <section class='choice-holder'>
+                <h1>RAP ARTIST</h1>
+                <div class='choices'>
+                    <div class="choice_1">21 Savage </div>
+                    <div class="choice_2"> Theophilus London</div>
+                    <div class="choice_3">Big Baby DRAM</div>
+                    <div class="choice_4">Tyga</div>
+                    <div class="choice_5">Freddie Gibbs</div>
+                </div>
+            </section>
+        </div>
+
+        <div class='right-giphy'>
+            <img src='images/break-dancing.gif' />
+        </div>
+
+    </div>
+
+    <script src='game-functions5.js'></script>
+</body>
+
 </html>

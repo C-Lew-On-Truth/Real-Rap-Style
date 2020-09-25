@@ -1,5 +1,4 @@
 let audio = document.getElementById('audio');
-let message = document.querySelector('.message');
 let countDown= false;
 let answersSelected = false;
 let rightSelect = false
@@ -9,17 +8,20 @@ let realTime = document.querySelector('.timer');
 let pause = document.querySelector('.pause');
 pause.hidden = true;
 let start = document.querySelector('.start');
-let time = 10;
+let time = 5;
 let rappers = document.querySelector('.choices')
 
 function timer() {
     let counter = setInterval(() => {
         if (countDown === true && answersSelected === false) {
+            realTime.style.color = "green";
             realTime.innerHTML = time;
             time--
             if (time <= -1) {
                 clearInterval(counter)
-                message.innerHTML = 'YOU FUCKED UP'
+                realTime.style.color = "red";
+                realTime.innerHTML = 'YOU FUCKED UP!'
+                rightSelect = true;
             };
         };
     }, 1000);
@@ -79,6 +81,7 @@ rappers.onclick = event => {
                 break
             case 'choice_4':
                 document.querySelector('.choice_4').classList.add('wrong-choice');
+                document.querySelector('.choice_4').innerHTML = "YOU CANT BE SERIOUS!"
                 break
             case 'choice_5':
                 document.querySelector('.choice_5').classList.add('wrong-choice')
