@@ -8,7 +8,7 @@ let realTime = document.querySelector('.timer');
 let pause = document.querySelector('.pause');
 pause.hidden = true;
 let start = document.querySelector('.start');
-let time = 5;
+let time = 10;
 let rappers = document.querySelector('.choices')
 
 function timer() {
