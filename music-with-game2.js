@@ -11,34 +11,34 @@ let pushaBeats = document.getElementById('pusha-plays');
 let quikBeats = document.getElementById('quik-plays');
 let stopMusic2 = document.getElementById('stop-music2');
 
+let grid = document.querySelector('.grid-container')
+
+let jRockPlaying = false;
+
 function playJayRock() {
+    jRockPlaying = true
     jRock.play();
-    console.log('Jay Rock is Playing');
     drake.pause() || youngGotti.pause() || pushaT.pause() || quik.pause()
 };
 
 function playDrake() {
     drake.play();
-    console.log('drake is playing');
     jRock.pause() || youngGotti.pause() || quik.pause() | pushaT.pause() 
 };
 
 
 function playKurupt() {
     youngGotti.play(); 
-    console.log('Kurupt! Ride or Die!');
     jRock.pause() || drake.pause() || pushaT.pause()  || quik.pause() 
 };
 
 function playPushaT() {
     pushaT.play();
-    console.log('Pusha Push')
     jRock.pause() || drake.pause() || youngGotti.pause() || quik.pause() 
 };
 
 function playQuik() {
     quik.play() 
-    console.log('play DJ quik');
     jRock.pause() || drake.pause() || youngGotti.pause() || pushaT.pause() 
 };
 
@@ -54,6 +54,22 @@ yGottiBeats.addEventListener('click', playKurupt);
 pushaBeats.addEventListener('click', playPushaT);
 quikBeats.addEventListener('click', playQuik);
 stopMusic2.addEventListener('click', stopAllMusic);
+
+jRock.onplay = function() { jRockBeats.style.background = "red" }
+jRock.onpause = function() { jRockBeats.style.background  = "black"}
+
+
+drake.onplay = function() { drakeBeats.style.background = "red" }
+drake.onpause = function() { drakeBeats.style.background = "black" }
+
+youngGotti.onplay = function() { yGottiBeats.style.background = "red" }
+youngGotti.onpause = function() { yGottiBeats.style.background = "black" }
+
+pushaT.onplay = function() { pushaBeats.style.background = "red" }
+pushaT.onpause = function() { pushaBeats.style.background = "black"}
+
+quik.onplay = function() { quikBeats.style.background = "red" }
+quik.onpause = function() { quikBeats.style.background = "black"}
 
 
 export { jRock, jRockBeats, playJayRock };

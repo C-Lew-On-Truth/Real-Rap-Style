@@ -16,7 +16,6 @@ alertGo.onclick = event => {
     let target = event.target
     if (target.classList.contains("alertGos")) {
         slidesMoving = true;
-        console.log("Alert Box Goes Away")
     }
 }
 
@@ -61,7 +60,6 @@ holder.onclick = event => {
     let target = event.target
 
     if (target.classList.contains("wrongChoice")) {
-        console.log("been seen")
         alertBox.style.display = "block";
         alertMessage.innerHTML = wrongMessages[Math.floor(Math.random() * wrongMessages.length)]
         slidesMoving = false;

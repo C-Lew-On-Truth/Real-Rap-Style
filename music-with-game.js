@@ -17,38 +17,32 @@
 
     function pacBegins() {
       pacMusic.play();
-      console.log('Thug Life!');
       fortyMusic.pause() || kuruptMusic.pause() || outkastMusic.pause() || jayMusic.pause()
     }
 
     function playForty() {
       fortyMusic.play();
-      console.log('40 Water!');
       pacMusic.pause() || kuruptMusic.pause() || outkastMusic.pause() || jayMusic.pause()
     }
 
     function playKurupt() {
       kuruptMusic.play();
-      console.log('Young Gotti!');
       pacMusic.pause() || fortyMusic.pause() || outkastMusic.pause() || jayMusic.pause()
     }
 
     function playOutkast() {
       outkastMusic.play();
-      console.log('Stank ya Very Much');
       pacMusic.pause() || fortyMusic.pause() || kuruptMusic.pause() || jayMusic.pause()
     }
 
     function playJayZ() {
       jayMusic.play();
-      console.log('Its the ROC baby!');
       pacMusic.pause() || fortyMusic.pause() || kuruptMusic.pause() || outkastMusic.pause()
     }
 
     function musicStop() {
       if (pacBegins || playForty || playKurupt || playOutkast || playJayZ) {
         pacMusic.pause() || fortyMusic.pause() || kuruptMusic.pause() || outkastMusic.pause() || jayMusic.pause();
-        console.log('stop music')
       }
     }
 

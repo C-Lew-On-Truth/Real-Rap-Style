@@ -40,37 +40,37 @@ const wrongRapDrag = [
 let rightRapAns = {
     drakeRight: function () {
         drakeBeats.innerHTML = "Yuuup Thats Drizzy!";
-        drakeBeats.style.backgroundColor = "white";
-        drakeBeats.style.color = "black";
+        drakeBeats.style.backgroundColor = "white !important";
+        drakeBeats.style.color = "black !important";
         this.rightMusicPlays()
 
     },
     jRockRight: function () {
         jRockBeats.innerHTML = "<span class='jrock'`>Yuuup!<br> Thats Jay RockS!<br>Straight Thugged Out!</span";
-        jRockBeats.style.backgroundColor = "white";
-        jRockBeats.style.color = "black";
+        jRockBeats.style.backgroundColor = "white !important";
+        jRockBeats.style.color = "black !important";
         this.rightMusicPlays()
 
     },
 
     quikRight: function () {
         quikBeats.innerHTML = "DJ Quik! Thats Old Skool!";
-        quikBeats.style.backgroundColor = "white";
-        quikBeats.style.color = "black";
+        quikBeats.style.backgroundColor = " white !important";
+        quikBeats.style.color = "black !important";
         this.rightMusicPlays()
     },
 
     pushaRight: function () {
         pushaBeats.innerHTML = "Pusha Push!";
-        pushaBeats.style.backgroundColor = "white";
-        pushaBeats.style.color = "black";
+        pushaBeats.style.backgroundColor = "white !important";
+        pushaBeats.style.color = "black !important";
         this.rightMusicPlays()
     },
 
     kuruptRight: function () {
         yGottiBeats.innerHTML = "Kurupt Young Gotti!";
-        yGottiBeats.style.backgroundColor = "white";
-        yGottiBeats.style.color = "black";
+        yGottiBeats.style.backgroundColor = "white !important";
+        yGottiBeats.style.color = "black !important";
         this.rightMusicPlays()
     },
 
@@ -105,14 +105,14 @@ const returnRapDrags = {
 
 };
 
+
+
 let dragging = false;
 
 document.ondragstart = function (event) {
     event.dataTransfer.setData('text', event.target.id);
-    console.log('dragstart');
     let target = event.target;
-    target.style.color = 'red'
-    target.style.fontSize = '50px;'
+    target.style.color = 'green'
 };
 
 document.ondrag = function (event) {
@@ -126,7 +126,6 @@ document.ondrag = function (event) {
 
 document.ondragover = function (event) {
     event.preventDefault();
-    console.log('dragover');
 };
 
 document.ondragend = function (event) {
@@ -147,11 +146,9 @@ const rapperDrop = {
         event.preventDefault();
         let jdata = event.dataTransfer.getData('text');
         event.target.appendChild(document.getElementById(jdata));
-        console.log('Jay Rock does not play');
-        //jRock.pause();
+     
 
         if (event.target.querySelector('#jRockDrag')) {
-            //jRockBeats.innerHTML = rightRapDrag[3];
             rightRapAns.jRockRight()
             rightRapTracker.push('point')
             jRockBeats.removeEventListener('drop', rapperDrop.jRockDrop);
@@ -184,11 +181,8 @@ const rapperDrop = {
         event.preventDefault();
         let drakeData = event.dataTransfer.getData('text');
         event.target.appendChild(document.getElementById(drakeData));
-        console.log('Drake does not playing');
-        //drake.pause();
-
+        
         if (event.target.querySelector('#drakeDrag')) {
-            //drakeBeats.innerHTML = rightRapDrag[0];
             rightRapAns.drakeRight();
             rightRapTracker.push('point')
             drakeBeats.removeEventListener('drop', rapperDrop.drakeDrop);
@@ -222,9 +216,7 @@ const rapperDrop = {
         event.preventDefault()
         let pushaTData = event.dataTransfer.getData('text');
         event.target.appendChild(document.getElementById(pushaTData));
-        console.log('pusha T stops playing')
-        //pushaT.pause()
-
+    
         if (event.target.querySelector('#pushaDrag')) {
             rightRapAns.pushaRight();
             rightRapTracker.push('point');
@@ -258,8 +250,7 @@ const rapperDrop = {
         event.preventDefault()
         let pushaTData = event.dataTransfer.getData('text');
         event.target.appendChild(document.getElementById(pushaTData));
-        console.log('pusha T stops playing');
-        //quik.pause();
+        
 
         if (event.target.querySelector('#quikDrag')) {
             rightRapAns.quikRight();
@@ -294,7 +285,6 @@ const rapperDrop = {
         event.preventDefault();
         let pushaTData = event.dataTransfer.getData('text');
         event.target.appendChild(document.getElementById(pushaTData));
-        console.log('pusha T stops playing');
 
 
         if (event.target.querySelector('#gottiDrag')) {

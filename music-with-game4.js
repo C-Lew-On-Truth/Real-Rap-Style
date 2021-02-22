@@ -13,25 +13,21 @@ let larry = document.getElementById('larry');
 artist1.onclick = function () {
     westside.play();
     action.pause() || asap.pause() || larry.pause()
-    console.log('Westside Gunn playing')
  }
 
  artist2.onclick = function () {
     action.play()
     westside.pause() || asap.pause() || larry.pause()
-    console.log('Action Bronson playing')
  }
  
  artist3.onclick = function () {
     asap.play()
     action.pause() || westside.pause() || larry.pause()
-    console.log('Asap Rockey playing')
  }
  
  artist4.onclick = function () {
     larry.play()
     action.pause() || asap.pause() || westside.pause()
-    console.log('Larry June playing')
  }
 
 stopMusic.onclick = () => {

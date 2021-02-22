@@ -56,12 +56,10 @@ function displayWrongJayZ() {
   jayWrong.style.border = "red dashed 6px";
   wrongJay.innerHTML = "You don't know anything...";
   wrongJay.classList.add("wrong")
-  console.log('Jay Z is Wrong');
 }
 
 function restartPage() {
   window.location.reload(true);
-  console.log('you see me')
 }
 
 function rightAnswer() {
