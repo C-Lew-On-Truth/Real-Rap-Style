@@ -22,6 +22,8 @@ function timer() {
                 realTime.style.color = "red";
                 realTime.innerHTML = 'YOU FUCKED UP!'
                 rightSelect = true;
+                alert('Now you gotta start over buddy')
+                window.location.href = "index.html"
             };
         };
     }, 1000);
@@ -74,6 +76,7 @@ rappers.onclick = event => {
                 countDown = false;
                 rightSelect = true;
                 answersSelected = true;
+                setTimeout(() => {window.location.href="winner.html"},2000)
                 break
             case 'choice_3':
                 document.querySelector('.choice_3').classList.add('wrong-choice')
